@@ -22,6 +22,47 @@
         </script>
 
         <script type="text/javascript">
+            function newProfile() {
+                var descriptor = document.getElementById("dataDescriptor").value;
+                var value = document.getElementById("dataValue").value;
+                var firstName = document.getElementById("firstName").value;
+                var lastName = document.getElementById("lastName").value;
+                var company = document.getElementById("company").value;
+                var address = document.getElementById("address").value;
+                var city = document.getElementById("city").value;
+                var state = document.getElementById("state").value;
+                var zip = document.getElementById("zip").value;
+                var country = document.getElementById("country").value;
+                var phone = document.getElementById("phone").value;
+                var email = document.getElementById("email").value;
+
+                $.ajax({
+                    url: "php/newProfile.php",
+                    type: 'post',
+                    data: {
+                        "descriptor": descriptor,
+                        "value": value,
+                        "firstName": firstName,
+                        "lastName": lastName,
+                        "company": company,
+                        "address": address,
+                        "city": city,
+                        "state": state,
+                        "zip": zip,
+                        "country": country,
+                        "phone": phone,
+                        "email": email
+                    },
+                    success: function(response) {
+                        document.getElementById("demo").innerHTML = response;
+                    },
+                    failure: function(error) {
+                        document.getElementById("demo").innerHTML = error;
+                    }
+                });
+            }
+
+                
             function chargeCard() {
                 var profileId = document.getElementById("profile").value;
                 var paymentId = document.getElementById("payment").value;
@@ -49,7 +90,7 @@
             Create New Profile
             <form id="paymentForm"
                   method="POST"
-                  action="javascript:submitPost()">
+                  action="javascript:newProfile()">
                 <input type="text" name="firstName" id="firstName" placeholder="First Name"/> <br>
                 <input type="text" name="lastName" id="lastName" placeholder="Last Name"/> <br>
                 <input type="text" name="company" id="company" placeholder="Company" /> <br>

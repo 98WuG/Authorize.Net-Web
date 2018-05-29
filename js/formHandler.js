@@ -45,14 +45,19 @@ function chargeCard() {
 	var amount = document.getElementById("amount").value;
 	var temp = document.getElementById("items");
 	var item = temp.options[temp.selectedIndex].text;
+	var itemId = temp.options[temp.selectedIndex].value;
 	$.ajax({
 		url: "php/chargeCard.php",
 		type: 'post',
-		data: { "profileId": profileId, "paymentId": paymentId, "amount": amount},
+		data: {
+			"profileId": profileId,
+			"paymentId": paymentId,
+			"amount": amount,
+			"item": item,
+			"itemId": itemId
+		},
 		success: function(response) {
-			document.getElementById("demo3").innerHTML =
-				item +
-				response;
+			document.getElementById("demo3").innerHTML = response;
 		},
 		failure: function(error) {
 			document.getElementById("demo3").innerHTML = error;

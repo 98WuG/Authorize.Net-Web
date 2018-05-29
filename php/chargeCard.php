@@ -6,10 +6,6 @@ use net\authorize\api\controller as AnetController;
 
 define("AUTHORIZENET_LOG_FILE", "phplog");
 
-function test($data) {
-	return $data+1;
-}
-
 if (isset($_POST['profileId']) && isset($_POST['paymentId']) && isset($_POST['amount'])){
 	chargeCustomerProfile($_POST['profileId'], $_POST['paymentId'], $_POST['amount']);
 }
@@ -31,10 +27,23 @@ function chargeCustomerProfile($profileid, $paymentprofileid, $amount)
 	$paymentProfile->setPaymentProfileId($paymentprofileid);
 	$profileToCharge->setPaymentProfile($paymentProfile);
 
+	$order = new AnetAPI\OrderType();
+	$invoice = rand(0,1000000);
+	$order->setInvoiceNumber($invoice);
+
+	$lineItem = new AnetAPI\LineItemType();
+	$lineItem->setItemId($_POST['itemId']);
+	$lineItem->setName($_POST['item']);
+	$lineItem->setQuantity(1);
+	$lineItem->setUnitPrice($amount);
+	$lineItem_Array[] = $lineItem;
+
 	$transactionRequestType = new AnetAPI\TransactionRequestType();
 	$transactionRequestType->setTransactionType( "authCaptureTransaction"); 
 	$transactionRequestType->setAmount($amount);
 	$transactionRequestType->setProfile($profileToCharge);
+	$transactionRequestType->setOrder($order);
+	$transactionRequestType->setLineItems($lineItem_Array);
 
 	$request = new AnetAPI\CreateTransactionRequest();
 	$request->setMerchantAuthentication($merchantAuthentication);

@@ -64,6 +64,7 @@ function chargeCustomerProfile($profileid, $paymentprofileid, $amount)
 				echo  "Charge Customer Profile APPROVED  :" . "<br>";
 				echo " Charge Customer Profile AUTH CODE : " . $tresponse->getAuthCode() . "<br>";
 				echo " Charge Customer Profile TRANS ID  : " . $tresponse->getTransId() . "<br>";
+				echo "Credit Card: " . $tresponse->getAccountType() . " " . $tresponse->getAccountNumber() . "<br>";
 				echo " Code : " . $tresponse->getMessages()[0]->getCode() . "<br>"; 
 				echo " Description : " . $tresponse->getMessages()[0]->getDescription() . "<br>";
 			}

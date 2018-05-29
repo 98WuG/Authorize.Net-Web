@@ -1,7 +1,3 @@
-// Global vars
-var name = "9Wq3Hvxt252";
-var transactionKey = "4eM7tE29yw5UH2sP";
-
 // Disable Enter key on form
 window.addEventListener('keydown',function(e){if(e.keyIdentifier=='U+000A'||e.keyIdentifier=='Enter'||e.keyCode==13){if(e.target.nodeName=='INPUT'&&e.target.type!='textarea'){e.preventDefault();return false;}}},true);
 

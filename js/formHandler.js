@@ -57,7 +57,8 @@ function chargeCard() {
 			"itemId": itemId
 		},
 		success: function(response) {
-			document.getElementById("demo3").innerHTML = response;
+			document.getElementById("demo3").innerHTML =
+				response;
 		},
 		failure: function(error) {
 			document.getElementById("demo3").innerHTML = error;

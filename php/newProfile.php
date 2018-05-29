@@ -108,7 +108,7 @@ function validateCustomerPaymentProfile($profileId, $paymentId)
 
     // Use an existing payment profile ID for this Merchant name and Transaction key
     //validationmode tests , does not send an email receipt
-    $validationmode = "testMode";
+    $validationmode = "liveMode";
 
     $request = new AnetAPI\ValidateCustomerPaymentProfileRequest();
 

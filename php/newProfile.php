@@ -40,16 +40,15 @@ function createCustomerProfile($email)
 
     // Create the Bill To info for new payment type
     $billTo = new AnetAPI\CustomerAddressType();
-    $billTo->setFirstName("Ellen");
-    $billTo->setLastName("Johnson");
-    $billTo->setCompany("Souveniropolis");
-    $billTo->setAddress("14 Main Street");
-    $billTo->setCity("Pecan Springs");
-    $billTo->setState("TX");
-    $billTo->setZip("44628");
-    $billTo->setCountry("USA");
-    $billTo->setPhoneNumber("888-888-8888");
-    $billTo->setfaxNumber("999-999-9999");
+    $billTo->setFirstName($_POST['firstName']);
+    $billTo->setLastName($_POST['lastName']);
+    $billTo->setCompany($_POST['company']);
+    $billTo->setAddress($_POST['address']);
+    $billTo->setCity($_POST['city']);
+    $billTo->setState($_POST['state']);
+    $billTo->setZip($_POST['zip']);
+    $billTo->setCountry($_POST['country']);
+    $billTo->setPhoneNumber($_POST['phone']);
 
 
     // Create a new CustomerPaymentProfile object
@@ -64,7 +63,6 @@ function createCustomerProfile($email)
     // Create a new CustomerProfileType and add the payment profile object
     $customerProfile = new AnetAPI\CustomerProfileType();
     $customerProfile->setDescription("Customer 2 Test PHP");
-    $customerProfile->setMerchantCustomerId("M_" . time());
     $customerProfile->setEmail($email);
     $customerProfile->setpaymentProfiles($paymentProfiles);
 
@@ -80,13 +78,13 @@ function createCustomerProfile($email)
     $response = $controller->executeWithApiResponse(\net\authorize\api\constants\ANetEnvironment::SANDBOX);
 
     if (($response != null) && ($response->getMessages()->getResultCode() == "Ok")) {
-        echo "Succesfully created customer profile : " . $response->getCustomerProfileId() . "\n";
+        echo "Succesfully created customer profile : " . $response->getCustomerProfileId() . "<br>";
         $paymentProfiles = $response->getCustomerPaymentProfileIdList();
-        echo "SUCCESS: PAYMENT PROFILE ID : " . $paymentProfiles[0] . "\n";
+        echo "SUCCESS:<br>PAYMENT PROFILE ID : " . $paymentProfiles[0] . "<br>";
     } else {
-        echo "ERROR :  Invalid response\n";
+        echo "ERROR :  Invalid response<br>";
         $errorMessages = $response->getMessages()->getMessage();
-        echo "Response : " . $errorMessages[0]->getCode() . "  " .$errorMessages[0]->getText() . "\n";
+        echo "Response : " . $errorMessages[0]->getCode() . "  " .$errorMessages[0]->getText() . "<br>";
     }
     return $response;
 }

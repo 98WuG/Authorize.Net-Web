@@ -3023,3 +3023,1049 @@
  Tue, 29 May 2018 20:06:02 +0200 INFO : [_sendRequest] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 96) - Response from AnetApi: ﻿<?xml version="1.0" encoding="utf-8"?><createCustomerProfileResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd"><refId>ref1527617161</refId><messages><resultCode>Ok</resultCode><message><code>I00001</code><text>Successful.</text></message></messages><customerProfileId>1504593687</customerProfileId><customerPaymentProfileIdList><numericString>1503902317</numericString></customerPaymentProfileIdList><customerShippingAddressIdList /><validationDirectResponseList /></createCustomerProfileResponse>
  Tue, 29 May 2018 20:06:02 +0200 INFO : [execute] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 128) - Response De-Serialization Begin
  Tue, 29 May 2018 20:06:03 +0200 INFO : [execute] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 130) - Response De-Serialization End
+ Tue, 29 May 2018 20:32:02 +0200 INFO : [execute] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 114) - Request Serialization Begin
+ Tue, 29 May 2018 20:32:02 +0200 DEBUG : [execute] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 115) - net\authorize\api\contract\v1\CreateCustomerProfileRequest Object
+(
+    [profile:net\authorize\api\contract\v1\CreateCustomerProfileRequest:private] => net\authorize\api\contract\v1\CustomerProfileType Object
+        (
+            [paymentProfiles:net\authorize\api\contract\v1\CustomerProfileType:private] => Array
+                (
+                    [0] => net\authorize\api\contract\v1\CustomerPaymentProfileType Object
+                        (
+                            [payment:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => net\authorize\api\contract\v1\PaymentType Object
+                                (
+                                    [creditCard:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [bankAccount:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [trackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [encryptedTrackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [payPal:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [opaqueData:net\authorize\api\contract\v1\PaymentType:private] => net\authorize\api\contract\v1\OpaqueDataType Object
+                                        (
+                                            [dataDescriptor:net\authorize\api\contract\v1\OpaqueDataType:private] => COMMON.ACCEPT.INAPP.PAYMENT
+                                            [dataValue:net\authorize\api\contract\v1\OpaqueDataType:private] => eyJjb2RlIjoiNTBfMl8wNjAwMDUzMUQwMEZGREMyOUVDODAyNEQ1NEJFMzQ3N0Y5RjY0OEVEQkE0NkQzOEE0OEM2MTdCN0IwQjlDM0EwMEY4REZBRDk1QzdFRUM0NUY4NjYzRURBRDFGNzE4Q0NDNUREQUZFIiwidG9rZW4iOiI5NTI3NjE4NzIyMjY5MzgxNDAzNTAyIiwidiI6IjEuMSJ9
+                                            [dataKey:net\authorize\api\contract\v1\OpaqueDataType:private] => 
+                                        )
+
+                                    [emv:net\authorize\api\contract\v1\PaymentType:private] => 
+                                )
+
+                            [driversLicense:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => 
+                            [taxId:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => 
+                            [defaultPaymentProfile:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => 1
+                            [customerType:net\authorize\api\contract\v1\CustomerPaymentProfileBaseType:private] => individual
+                            [billTo:net\authorize\api\contract\v1\CustomerPaymentProfileBaseType:private] => net\authorize\api\contract\v1\CustomerAddressType Object
+                                (
+                                    [phoneNumber:net\authorize\api\contract\v1\CustomerAddressType:private] => 888-888-8888
+                                    [faxNumber:net\authorize\api\contract\v1\CustomerAddressType:private] => 999-999-9999
+                                    [email:net\authorize\api\contract\v1\CustomerAddressType:private] => 
+                                    [firstName:net\authorize\api\contract\v1\NameAndAddressType:private] => Ellen
+                                    [lastName:net\authorize\api\contract\v1\NameAndAddressType:private] => Johnson
+                                    [company:net\authorize\api\contract\v1\NameAndAddressType:private] => Souveniropolis
+                                    [address:net\authorize\api\contract\v1\NameAndAddressType:private] => 14 Main Street
+                                    [city:net\authorize\api\contract\v1\NameAndAddressType:private] => Pecan Springs
+                                    [state:net\authorize\api\contract\v1\NameAndAddressType:private] => TX
+                                    [zip:net\authorize\api\contract\v1\NameAndAddressType:private] => 44628
+                                    [country:net\authorize\api\contract\v1\NameAndAddressType:private] => USA
+                                )
+
+                        )
+
+                )
+
+            [shipToList:net\authorize\api\contract\v1\CustomerProfileType:private] => 
+            [merchantCustomerId:net\authorize\api\contract\v1\CustomerProfileBaseType:private] => M_1527618722
+            [description:net\authorize\api\contract\v1\CustomerProfileBaseType:private] => Customer 2 Test PHP
+            [email:net\authorize\api\contract\v1\CustomerProfileBaseType:private] => test@email.com
+        )
+
+    [validationMode:net\authorize\api\contract\v1\CreateCustomerProfileRequest:private] => 
+    [merchantAuthentication:net\authorize\api\contract\v1\ANetApiRequestType:private] => net\authorize\api\contract\v1\MerchantAuthenticationType Object
+        (
+            [name:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 9Wq3Hvxt252
+            [transactionKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => xxxx
+            [sessionToken:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [password:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [impersonationAuthentication:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [fingerPrint:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [clientKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [accessToken:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [mobileDeviceId:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+        )
+
+    [clientId:net\authorize\api\contract\v1\ANetApiRequestType:private] => sdk-php-1.9.6
+    [refId:net\authorize\api\contract\v1\ANetApiRequestType:private] => ref1527618722
+)
+
+ Tue, 29 May 2018 20:32:02 +0200 INFO : [execute] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 118) - Request  Serialization End
+ Tue, 29 May 2018 20:32:02 +0200 INFO : [_sendRequest] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 75) -  Url: https://apitest.authorize.net/xml/v1/request.api
+ Tue, 29 May 2018 20:32:02 +0200 INFO : [_sendRequest] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 77) - Request to AnetApi: 
+<?xml version="1.0" encoding="UTF-8"?>
+<createCustomerProfileRequest xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd">
+  <merchantAuthentication>
+    <name><![CDATA[9Wq3Hvxt252]]></name>
+    <transactionKey>xxxx</transactionKey>
+  </merchantAuthentication>
+  <clientId><![CDATA[sdk-php-1.9.6]]></clientId>
+  <refId><![CDATA[ref1527618722]]></refId>
+  <profile>
+    <merchantCustomerId><![CDATA[M_1527618722]]></merchantCustomerId>
+    <description><![CDATA[Customer 2 Test PHP]]></description>
+    <email><![CDATA[test@email.com]]></email>
+    <paymentProfiles>
+      <customerType><![CDATA[individual]]></customerType>
+      <billTo>
+        <firstName><![CDATA[Ellen]]></firstName>
+        <lastName><![CDATA[Johnson]]></lastName>
+        <company><![CDATA[Souveniropolis]]></company>
+        <address><![CDATA[14 Main Street]]></address>
+        <city><![CDATA[Pecan Springs]]></city>
+        <state><![CDATA[TX]]></state>
+        <zip><![CDATA[44628]]></zip>
+        <country><![CDATA[USA]]></country>
+        <phoneNumber><![CDATA[888-888-8888]]></phoneNumber>
+        <faxNumber><![CDATA[999-999-9999]]></faxNumber>
+      </billTo>
+      <payment>
+        <opaqueData>
+          <dataDescriptor><![CDATA[COMMON.ACCEPT.INAPP.PAYMENT]]></dataDescriptor>
+          <dataValue><![CDATA[eyJjb2RlIjoiNTBfMl8wNjAwMDUzMUQwMEZGREMyOUVDODAyNEQ1NEJFMzQ3N0Y5RjY0OEVEQkE0NkQzOEE0OEM2MTdCN0IwQjlDM0EwMEY4REZBRDk1QzdFRUM0NUY4NjYzRURBRDFGNzE4Q0NDNUREQUZFIiwidG9rZW4iOiI5NTI3NjE4NzIyMjY5MzgxNDAzNTAyIiwidiI6IjEuMSJ9]]></dataValue>
+        </opaqueData>
+      </payment>
+      <defaultPaymentProfile>true</defaultPaymentProfile>
+    </paymentProfiles>
+  </profile>
+</createCustomerProfileRequest>
+
+ Tue, 29 May 2018 20:32:02 +0200 INFO : [_sendRequest] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 89) - Sending 'XML' Request type
+ Tue, 29 May 2018 20:32:02 +0200 INFO : [_sendRequest] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 94) - Sending http request via Curl
+ Tue, 29 May 2018 20:32:03 +0200 INFO : [_sendRequest] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 96) - Response from AnetApi: ﻿<?xml version="1.0" encoding="utf-8"?><createCustomerProfileResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd"><refId>ref1527618722</refId><messages><resultCode>Ok</resultCode><message><code>I00001</code><text>Successful.</text></message></messages><customerProfileId>1504594088</customerProfileId><customerPaymentProfileIdList><numericString>1503902615</numericString></customerPaymentProfileIdList><customerShippingAddressIdList /><validationDirectResponseList /></createCustomerProfileResponse>
+ Tue, 29 May 2018 20:32:03 +0200 INFO : [execute] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 128) - Response De-Serialization Begin
+ Tue, 29 May 2018 20:32:03 +0200 INFO : [execute] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 130) - Response De-Serialization End
+ Tue, 29 May 2018 20:44:10 +0200 INFO : [execute] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 114) - Request Serialization Begin
+ Tue, 29 May 2018 20:44:11 +0200 DEBUG : [execute] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 115) - net\authorize\api\contract\v1\CreateCustomerProfileRequest Object
+(
+    [profile:net\authorize\api\contract\v1\CreateCustomerProfileRequest:private] => net\authorize\api\contract\v1\CustomerProfileType Object
+        (
+            [paymentProfiles:net\authorize\api\contract\v1\CustomerProfileType:private] => Array
+                (
+                    [0] => net\authorize\api\contract\v1\CustomerPaymentProfileType Object
+                        (
+                            [payment:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => net\authorize\api\contract\v1\PaymentType Object
+                                (
+                                    [creditCard:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [bankAccount:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [trackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [encryptedTrackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [payPal:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [opaqueData:net\authorize\api\contract\v1\PaymentType:private] => net\authorize\api\contract\v1\OpaqueDataType Object
+                                        (
+                                            [dataDescriptor:net\authorize\api\contract\v1\OpaqueDataType:private] => COMMON.ACCEPT.INAPP.PAYMENT
+                                            [dataValue:net\authorize\api\contract\v1\OpaqueDataType:private] => eyJjb2RlIjoiNTBfMl8wNjAwMDUyRUE4MzA0QzlDRDNCMUUzNENBNkZCRDAwQUY0ODZBREVCQ0YyRUIyRTE0RjkxMEMyRjkzQTdCNzBGMjFFOEYxNjExNjZBRTgwQTRENDUxNjlCQzJBMzM3MjQwRURGODE2IiwidG9rZW4iOiI5NTI3NjE5NDQ2NDY4MzgwMDAzNTAxIiwidiI6IjEuMSJ9
+                                            [dataKey:net\authorize\api\contract\v1\OpaqueDataType:private] => 
+                                        )
+
+                                    [emv:net\authorize\api\contract\v1\PaymentType:private] => 
+                                )
+
+                            [driversLicense:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => 
+                            [taxId:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => 
+                            [defaultPaymentProfile:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => 1
+                            [customerType:net\authorize\api\contract\v1\CustomerPaymentProfileBaseType:private] => individual
+                            [billTo:net\authorize\api\contract\v1\CustomerPaymentProfileBaseType:private] => net\authorize\api\contract\v1\CustomerAddressType Object
+                                (
+                                    [phoneNumber:net\authorize\api\contract\v1\CustomerAddressType:private] => 5555555555
+                                    [faxNumber:net\authorize\api\contract\v1\CustomerAddressType:private] => 
+                                    [email:net\authorize\api\contract\v1\CustomerAddressType:private] => 
+                                    [firstName:net\authorize\api\contract\v1\NameAndAddressType:private] => John
+                                    [lastName:net\authorize\api\contract\v1\NameAndAddressType:private] => Doe
+                                    [company:net\authorize\api\contract\v1\NameAndAddressType:private] => Test Company
+                                    [address:net\authorize\api\contract\v1\NameAndAddressType:private] => 9999 Street Name
+                                    [city:net\authorize\api\contract\v1\NameAndAddressType:private] => City
+                                    [state:net\authorize\api\contract\v1\NameAndAddressType:private] => VA
+                                    [zip:net\authorize\api\contract\v1\NameAndAddressType:private] => 11111
+                                    [country:net\authorize\api\contract\v1\NameAndAddressType:private] => US
+                                )
+
+                        )
+
+                )
+
+            [shipToList:net\authorize\api\contract\v1\CustomerProfileType:private] => 
+            [merchantCustomerId:net\authorize\api\contract\v1\CustomerProfileBaseType:private] => 
+            [description:net\authorize\api\contract\v1\CustomerProfileBaseType:private] => Customer 2 Test PHP
+            [email:net\authorize\api\contract\v1\CustomerProfileBaseType:private] => test@email.com
+        )
+
+    [validationMode:net\authorize\api\contract\v1\CreateCustomerProfileRequest:private] => 
+    [merchantAuthentication:net\authorize\api\contract\v1\ANetApiRequestType:private] => net\authorize\api\contract\v1\MerchantAuthenticationType Object
+        (
+            [name:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 9Wq3Hvxt252
+            [transactionKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => xxxx
+            [sessionToken:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [password:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [impersonationAuthentication:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [fingerPrint:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [clientKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [accessToken:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [mobileDeviceId:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+        )
+
+    [clientId:net\authorize\api\contract\v1\ANetApiRequestType:private] => sdk-php-1.9.6
+    [refId:net\authorize\api\contract\v1\ANetApiRequestType:private] => ref1527619448
+)
+
+ Tue, 29 May 2018 20:44:11 +0200 INFO : [execute] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 118) - Request  Serialization End
+ Tue, 29 May 2018 20:44:11 +0200 INFO : [_sendRequest] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 75) -  Url: https://apitest.authorize.net/xml/v1/request.api
+ Tue, 29 May 2018 20:44:11 +0200 INFO : [_sendRequest] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 77) - Request to AnetApi: 
+<?xml version="1.0" encoding="UTF-8"?>
+<createCustomerProfileRequest xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd">
+  <merchantAuthentication>
+    <name><![CDATA[9Wq3Hvxt252]]></name>
+    <transactionKey>xxxx</transactionKey>
+  </merchantAuthentication>
+  <clientId><![CDATA[sdk-php-1.9.6]]></clientId>
+  <refId><![CDATA[ref1527619448]]></refId>
+  <profile>
+    <description><![CDATA[Customer 2 Test PHP]]></description>
+    <email><![CDATA[test@email.com]]></email>
+    <paymentProfiles>
+      <customerType><![CDATA[individual]]></customerType>
+      <billTo>
+        <firstName><![CDATA[John]]></firstName>
+        <lastName><![CDATA[Doe]]></lastName>
+        <company><![CDATA[Test Company]]></company>
+        <address><![CDATA[9999 Street Name]]></address>
+        <city><![CDATA[City]]></city>
+        <state><![CDATA[VA]]></state>
+        <zip><![CDATA[11111]]></zip>
+        <country><![CDATA[US]]></country>
+        <phoneNumber><![CDATA[5555555555]]></phoneNumber>
+      </billTo>
+      <payment>
+        <opaqueData>
+          <dataDescriptor><![CDATA[COMMON.ACCEPT.INAPP.PAYMENT]]></dataDescriptor>
+          <dataValue><![CDATA[eyJjb2RlIjoiNTBfMl8wNjAwMDUyRUE4MzA0QzlDRDNCMUUzNENBNkZCRDAwQUY0ODZBREVCQ0YyRUIyRTE0RjkxMEMyRjkzQTdCNzBGMjFFOEYxNjExNjZBRTgwQTRENDUxNjlCQzJBMzM3MjQwRURGODE2IiwidG9rZW4iOiI5NTI3NjE5NDQ2NDY4MzgwMDAzNTAxIiwidiI6IjEuMSJ9]]></dataValue>
+        </opaqueData>
+      </payment>
+      <defaultPaymentProfile>true</defaultPaymentProfile>
+    </paymentProfiles>
+  </profile>
+</createCustomerProfileRequest>
+
+ Tue, 29 May 2018 20:44:11 +0200 INFO : [_sendRequest] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 89) - Sending 'XML' Request type
+ Tue, 29 May 2018 20:44:11 +0200 INFO : [_sendRequest] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 94) - Sending http request via Curl
+ Tue, 29 May 2018 20:44:12 +0200 INFO : [_sendRequest] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 96) - Response from AnetApi: ﻿<?xml version="1.0" encoding="utf-8"?><createCustomerProfileResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd"><refId>ref1527619448</refId><messages><resultCode>Ok</resultCode><message><code>I00001</code><text>Successful.</text></message></messages><customerProfileId>1504594717</customerProfileId><customerPaymentProfileIdList><numericString>1503902924</numericString></customerPaymentProfileIdList><customerShippingAddressIdList /><validationDirectResponseList /></createCustomerProfileResponse>
+ Tue, 29 May 2018 20:44:12 +0200 INFO : [execute] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 128) - Response De-Serialization Begin
+ Tue, 29 May 2018 20:44:12 +0200 INFO : [execute] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 130) - Response De-Serialization End
+ Tue, 29 May 2018 20:45:05 +0200 INFO : [execute] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 114) - Request Serialization Begin
+ Tue, 29 May 2018 20:45:05 +0200 DEBUG : [execute] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 115) - net\authorize\api\contract\v1\CreateCustomerProfileRequest Object
+(
+    [profile:net\authorize\api\contract\v1\CreateCustomerProfileRequest:private] => net\authorize\api\contract\v1\CustomerProfileType Object
+        (
+            [paymentProfiles:net\authorize\api\contract\v1\CustomerProfileType:private] => Array
+                (
+                    [0] => net\authorize\api\contract\v1\CustomerPaymentProfileType Object
+                        (
+                            [payment:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => net\authorize\api\contract\v1\PaymentType Object
+                                (
+                                    [creditCard:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [bankAccount:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [trackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [encryptedTrackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [payPal:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [opaqueData:net\authorize\api\contract\v1\PaymentType:private] => net\authorize\api\contract\v1\OpaqueDataType Object
+                                        (
+                                            [dataDescriptor:net\authorize\api\contract\v1\OpaqueDataType:private] => COMMON.ACCEPT.INAPP.PAYMENT
+                                            [dataValue:net\authorize\api\contract\v1\OpaqueDataType:private] => eyJjb2RlIjoiNTBfMl8wNjAwMDUyNTRCNEM1Qjg1QzhERDg5Mjg0QjVCQTY2MDhGMjIzRUE1REUxRjQ4Mjc1REI4QjA5MjdBODJCQ0VDMEVCMDA2NEMzRDVGMzUwNjYxODUwMDdGN0JDNUFEMzRERUM0RTlGIiwidG9rZW4iOiI5NTI3NjE5NTA1MDM4MzgwMjAzNTAxIiwidiI6IjEuMSJ9
+                                            [dataKey:net\authorize\api\contract\v1\OpaqueDataType:private] => 
+                                        )
+
+                                    [emv:net\authorize\api\contract\v1\PaymentType:private] => 
+                                )
+
+                            [driversLicense:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => 
+                            [taxId:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => 
+                            [defaultPaymentProfile:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => 1
+                            [customerType:net\authorize\api\contract\v1\CustomerPaymentProfileBaseType:private] => individual
+                            [billTo:net\authorize\api\contract\v1\CustomerPaymentProfileBaseType:private] => net\authorize\api\contract\v1\CustomerAddressType Object
+                                (
+                                    [phoneNumber:net\authorize\api\contract\v1\CustomerAddressType:private] => 5555555555
+                                    [faxNumber:net\authorize\api\contract\v1\CustomerAddressType:private] => 
+                                    [email:net\authorize\api\contract\v1\CustomerAddressType:private] => 
+                                    [firstName:net\authorize\api\contract\v1\NameAndAddressType:private] => John
+                                    [lastName:net\authorize\api\contract\v1\NameAndAddressType:private] => Doe
+                                    [company:net\authorize\api\contract\v1\NameAndAddressType:private] => Test Company
+                                    [address:net\authorize\api\contract\v1\NameAndAddressType:private] => 9999 Street Name
+                                    [city:net\authorize\api\contract\v1\NameAndAddressType:private] => City
+                                    [state:net\authorize\api\contract\v1\NameAndAddressType:private] => VA
+                                    [zip:net\authorize\api\contract\v1\NameAndAddressType:private] => 11111
+                                    [country:net\authorize\api\contract\v1\NameAndAddressType:private] => US
+                                )
+
+                        )
+
+                )
+
+            [shipToList:net\authorize\api\contract\v1\CustomerProfileType:private] => 
+            [merchantCustomerId:net\authorize\api\contract\v1\CustomerProfileBaseType:private] => 
+            [description:net\authorize\api\contract\v1\CustomerProfileBaseType:private] => Customer 2 Test PHP
+            [email:net\authorize\api\contract\v1\CustomerProfileBaseType:private] => test@email.com
+        )
+
+    [validationMode:net\authorize\api\contract\v1\CreateCustomerProfileRequest:private] => 
+    [merchantAuthentication:net\authorize\api\contract\v1\ANetApiRequestType:private] => net\authorize\api\contract\v1\MerchantAuthenticationType Object
+        (
+            [name:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 9Wq3Hvxt252
+            [transactionKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => xxxx
+            [sessionToken:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [password:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [impersonationAuthentication:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [fingerPrint:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [clientKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [accessToken:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [mobileDeviceId:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+        )
+
+    [clientId:net\authorize\api\contract\v1\ANetApiRequestType:private] => sdk-php-1.9.6
+    [refId:net\authorize\api\contract\v1\ANetApiRequestType:private] => ref1527619505
+)
+
+ Tue, 29 May 2018 20:45:05 +0200 INFO : [execute] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 118) - Request  Serialization End
+ Tue, 29 May 2018 20:45:05 +0200 INFO : [_sendRequest] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 75) -  Url: https://apitest.authorize.net/xml/v1/request.api
+ Tue, 29 May 2018 20:45:05 +0200 INFO : [_sendRequest] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 77) - Request to AnetApi: 
+<?xml version="1.0" encoding="UTF-8"?>
+<createCustomerProfileRequest xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd">
+  <merchantAuthentication>
+    <name><![CDATA[9Wq3Hvxt252]]></name>
+    <transactionKey>xxxx</transactionKey>
+  </merchantAuthentication>
+  <clientId><![CDATA[sdk-php-1.9.6]]></clientId>
+  <refId><![CDATA[ref1527619505]]></refId>
+  <profile>
+    <description><![CDATA[Customer 2 Test PHP]]></description>
+    <email><![CDATA[test@email.com]]></email>
+    <paymentProfiles>
+      <customerType><![CDATA[individual]]></customerType>
+      <billTo>
+        <firstName><![CDATA[John]]></firstName>
+        <lastName><![CDATA[Doe]]></lastName>
+        <company><![CDATA[Test Company]]></company>
+        <address><![CDATA[9999 Street Name]]></address>
+        <city><![CDATA[City]]></city>
+        <state><![CDATA[VA]]></state>
+        <zip><![CDATA[11111]]></zip>
+        <country><![CDATA[US]]></country>
+        <phoneNumber><![CDATA[5555555555]]></phoneNumber>
+      </billTo>
+      <payment>
+        <opaqueData>
+          <dataDescriptor><![CDATA[COMMON.ACCEPT.INAPP.PAYMENT]]></dataDescriptor>
+          <dataValue><![CDATA[eyJjb2RlIjoiNTBfMl8wNjAwMDUyNTRCNEM1Qjg1QzhERDg5Mjg0QjVCQTY2MDhGMjIzRUE1REUxRjQ4Mjc1REI4QjA5MjdBODJCQ0VDMEVCMDA2NEMzRDVGMzUwNjYxODUwMDdGN0JDNUFEMzRERUM0RTlGIiwidG9rZW4iOiI5NTI3NjE5NTA1MDM4MzgwMjAzNTAxIiwidiI6IjEuMSJ9]]></dataValue>
+        </opaqueData>
+      </payment>
+      <defaultPaymentProfile>true</defaultPaymentProfile>
+    </paymentProfiles>
+  </profile>
+</createCustomerProfileRequest>
+
+ Tue, 29 May 2018 20:45:05 +0200 INFO : [_sendRequest] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 89) - Sending 'XML' Request type
+ Tue, 29 May 2018 20:45:05 +0200 INFO : [_sendRequest] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 94) - Sending http request via Curl
+ Tue, 29 May 2018 20:45:06 +0200 INFO : [_sendRequest] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 96) - Response from AnetApi: ﻿<?xml version="1.0" encoding="utf-8"?><createCustomerProfileResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd"><refId>ref1527619505</refId><messages><resultCode>Ok</resultCode><message><code>I00001</code><text>Successful.</text></message></messages><customerProfileId>1504594769</customerProfileId><customerPaymentProfileIdList><numericString>1503902936</numericString></customerPaymentProfileIdList><customerShippingAddressIdList /><validationDirectResponseList /></createCustomerProfileResponse>
+ Tue, 29 May 2018 20:45:06 +0200 INFO : [execute] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 128) - Response De-Serialization Begin
+ Tue, 29 May 2018 20:45:06 +0200 INFO : [execute] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 130) - Response De-Serialization End
+ Tue, 29 May 2018 20:45:44 +0200 INFO : [execute] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 114) - Request Serialization Begin
+ Tue, 29 May 2018 20:45:44 +0200 DEBUG : [execute] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 115) - net\authorize\api\contract\v1\CreateCustomerProfileRequest Object
+(
+    [profile:net\authorize\api\contract\v1\CreateCustomerProfileRequest:private] => net\authorize\api\contract\v1\CustomerProfileType Object
+        (
+            [paymentProfiles:net\authorize\api\contract\v1\CustomerProfileType:private] => Array
+                (
+                    [0] => net\authorize\api\contract\v1\CustomerPaymentProfileType Object
+                        (
+                            [payment:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => net\authorize\api\contract\v1\PaymentType Object
+                                (
+                                    [creditCard:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [bankAccount:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [trackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [encryptedTrackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [payPal:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [opaqueData:net\authorize\api\contract\v1\PaymentType:private] => net\authorize\api\contract\v1\OpaqueDataType Object
+                                        (
+                                            [dataDescriptor:net\authorize\api\contract\v1\OpaqueDataType:private] => COMMON.ACCEPT.INAPP.PAYMENT
+                                            [dataValue:net\authorize\api\contract\v1\OpaqueDataType:private] => eyJjb2RlIjoiNTBfMl8wNjAwMDUyMkVEOUJBRTNDQ0Y2NDREMTFDOTE0RjlBMTREMTk1OURBOTFBNkQ2QjA4NDE0NDQwRThCNTNGNTQyNzgwNjhCM0Q3NTVGQTg4RDY5MEE4NkM4ODQ5NDYzRDVGNTY3MTZCIiwidG9rZW4iOiI5NTI3NjE5NTQyMzg5MzgzMDAzNTAyIiwidiI6IjEuMSJ9
+                                            [dataKey:net\authorize\api\contract\v1\OpaqueDataType:private] => 
+                                        )
+
+                                    [emv:net\authorize\api\contract\v1\PaymentType:private] => 
+                                )
+
+                            [driversLicense:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => 
+                            [taxId:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => 
+                            [defaultPaymentProfile:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => 1
+                            [customerType:net\authorize\api\contract\v1\CustomerPaymentProfileBaseType:private] => individual
+                            [billTo:net\authorize\api\contract\v1\CustomerPaymentProfileBaseType:private] => net\authorize\api\contract\v1\CustomerAddressType Object
+                                (
+                                    [phoneNumber:net\authorize\api\contract\v1\CustomerAddressType:private] => 5555555555
+                                    [faxNumber:net\authorize\api\contract\v1\CustomerAddressType:private] => 
+                                    [email:net\authorize\api\contract\v1\CustomerAddressType:private] => 
+                                    [firstName:net\authorize\api\contract\v1\NameAndAddressType:private] => John
+                                    [lastName:net\authorize\api\contract\v1\NameAndAddressType:private] => Doe
+                                    [company:net\authorize\api\contract\v1\NameAndAddressType:private] => Test Company
+                                    [address:net\authorize\api\contract\v1\NameAndAddressType:private] => 9999 Street Name
+                                    [city:net\authorize\api\contract\v1\NameAndAddressType:private] => City
+                                    [state:net\authorize\api\contract\v1\NameAndAddressType:private] => VA
+                                    [zip:net\authorize\api\contract\v1\NameAndAddressType:private] => 11111
+                                    [country:net\authorize\api\contract\v1\NameAndAddressType:private] => US
+                                )
+
+                        )
+
+                )
+
+            [shipToList:net\authorize\api\contract\v1\CustomerProfileType:private] => 
+            [merchantCustomerId:net\authorize\api\contract\v1\CustomerProfileBaseType:private] => 
+            [description:net\authorize\api\contract\v1\CustomerProfileBaseType:private] => Customer 2 Test PHP
+            [email:net\authorize\api\contract\v1\CustomerProfileBaseType:private] => test@email.com
+        )
+
+    [validationMode:net\authorize\api\contract\v1\CreateCustomerProfileRequest:private] => 
+    [merchantAuthentication:net\authorize\api\contract\v1\ANetApiRequestType:private] => net\authorize\api\contract\v1\MerchantAuthenticationType Object
+        (
+            [name:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 9Wq3Hvxt252
+            [transactionKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => xxxx
+            [sessionToken:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [password:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [impersonationAuthentication:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [fingerPrint:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [clientKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [accessToken:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [mobileDeviceId:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+        )
+
+    [clientId:net\authorize\api\contract\v1\ANetApiRequestType:private] => sdk-php-1.9.6
+    [refId:net\authorize\api\contract\v1\ANetApiRequestType:private] => ref1527619542
+)
+
+ Tue, 29 May 2018 20:45:44 +0200 INFO : [execute] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 118) - Request  Serialization End
+ Tue, 29 May 2018 20:45:44 +0200 INFO : [_sendRequest] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 75) -  Url: https://apitest.authorize.net/xml/v1/request.api
+ Tue, 29 May 2018 20:45:44 +0200 INFO : [_sendRequest] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 77) - Request to AnetApi: 
+<?xml version="1.0" encoding="UTF-8"?>
+<createCustomerProfileRequest xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd">
+  <merchantAuthentication>
+    <name><![CDATA[9Wq3Hvxt252]]></name>
+    <transactionKey>xxxx</transactionKey>
+  </merchantAuthentication>
+  <clientId><![CDATA[sdk-php-1.9.6]]></clientId>
+  <refId><![CDATA[ref1527619542]]></refId>
+  <profile>
+    <description><![CDATA[Customer 2 Test PHP]]></description>
+    <email><![CDATA[test@email.com]]></email>
+    <paymentProfiles>
+      <customerType><![CDATA[individual]]></customerType>
+      <billTo>
+        <firstName><![CDATA[John]]></firstName>
+        <lastName><![CDATA[Doe]]></lastName>
+        <company><![CDATA[Test Company]]></company>
+        <address><![CDATA[9999 Street Name]]></address>
+        <city><![CDATA[City]]></city>
+        <state><![CDATA[VA]]></state>
+        <zip><![CDATA[11111]]></zip>
+        <country><![CDATA[US]]></country>
+        <phoneNumber><![CDATA[5555555555]]></phoneNumber>
+      </billTo>
+      <payment>
+        <opaqueData>
+          <dataDescriptor><![CDATA[COMMON.ACCEPT.INAPP.PAYMENT]]></dataDescriptor>
+          <dataValue><![CDATA[eyJjb2RlIjoiNTBfMl8wNjAwMDUyMkVEOUJBRTNDQ0Y2NDREMTFDOTE0RjlBMTREMTk1OURBOTFBNkQ2QjA4NDE0NDQwRThCNTNGNTQyNzgwNjhCM0Q3NTVGQTg4RDY5MEE4NkM4ODQ5NDYzRDVGNTY3MTZCIiwidG9rZW4iOiI5NTI3NjE5NTQyMzg5MzgzMDAzNTAyIiwidiI6IjEuMSJ9]]></dataValue>
+        </opaqueData>
+      </payment>
+      <defaultPaymentProfile>true</defaultPaymentProfile>
+    </paymentProfiles>
+  </profile>
+</createCustomerProfileRequest>
+
+ Tue, 29 May 2018 20:45:44 +0200 INFO : [_sendRequest] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 89) - Sending 'XML' Request type
+ Tue, 29 May 2018 20:45:44 +0200 INFO : [_sendRequest] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 94) - Sending http request via Curl
+ Tue, 29 May 2018 20:45:44 +0200 INFO : [_sendRequest] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 96) - Response from AnetApi: ﻿<?xml version="1.0" encoding="utf-8"?><createCustomerProfileResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd"><refId>ref1527619542</refId><messages><resultCode>Error</resultCode><message><code>E00039</code><text>A duplicate record with ID 1504594769 already exists.</text></message></messages><customerPaymentProfileIdList /><customerShippingAddressIdList /><validationDirectResponseList /></createCustomerProfileResponse>
+ Tue, 29 May 2018 20:45:45 +0200 INFO : [execute] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 128) - Response De-Serialization Begin
+ Tue, 29 May 2018 20:45:45 +0200 INFO : [execute] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 130) - Response De-Serialization End
+ Tue, 29 May 2018 20:46:02 +0200 INFO : [execute] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 114) - Request Serialization Begin
+ Tue, 29 May 2018 20:46:02 +0200 DEBUG : [execute] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 115) - net\authorize\api\contract\v1\CreateCustomerProfileRequest Object
+(
+    [profile:net\authorize\api\contract\v1\CreateCustomerProfileRequest:private] => net\authorize\api\contract\v1\CustomerProfileType Object
+        (
+            [paymentProfiles:net\authorize\api\contract\v1\CustomerProfileType:private] => Array
+                (
+                    [0] => net\authorize\api\contract\v1\CustomerPaymentProfileType Object
+                        (
+                            [payment:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => net\authorize\api\contract\v1\PaymentType Object
+                                (
+                                    [creditCard:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [bankAccount:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [trackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [encryptedTrackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [payPal:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [opaqueData:net\authorize\api\contract\v1\PaymentType:private] => net\authorize\api\contract\v1\OpaqueDataType Object
+                                        (
+                                            [dataDescriptor:net\authorize\api\contract\v1\OpaqueDataType:private] => COMMON.ACCEPT.INAPP.PAYMENT
+                                            [dataValue:net\authorize\api\contract\v1\OpaqueDataType:private] => eyJjb2RlIjoiNTBfMl8wNjAwMDUzRTNGOEU0RUNDRDgzNDYyQzFBRTlDQzMxNDUxMDNFOEJENEJBRkE4QkJCODMxM0M4MUUwMTY2OEQxNjVCQzhFODNBQUFERkI5ODRBNjIzMERGNzBDNjI3MzY0RDExNjcyIiwidG9rZW4iOiI5NTI3NjE5NTYyNDI3MzgwNTAzNTAxIiwidiI6IjEuMSJ9
+                                            [dataKey:net\authorize\api\contract\v1\OpaqueDataType:private] => 
+                                        )
+
+                                    [emv:net\authorize\api\contract\v1\PaymentType:private] => 
+                                )
+
+                            [driversLicense:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => 
+                            [taxId:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => 
+                            [defaultPaymentProfile:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => 1
+                            [customerType:net\authorize\api\contract\v1\CustomerPaymentProfileBaseType:private] => individual
+                            [billTo:net\authorize\api\contract\v1\CustomerPaymentProfileBaseType:private] => net\authorize\api\contract\v1\CustomerAddressType Object
+                                (
+                                    [phoneNumber:net\authorize\api\contract\v1\CustomerAddressType:private] => 5555555555
+                                    [faxNumber:net\authorize\api\contract\v1\CustomerAddressType:private] => 
+                                    [email:net\authorize\api\contract\v1\CustomerAddressType:private] => 
+                                    [firstName:net\authorize\api\contract\v1\NameAndAddressType:private] => John
+                                    [lastName:net\authorize\api\contract\v1\NameAndAddressType:private] => Doe
+                                    [company:net\authorize\api\contract\v1\NameAndAddressType:private] => Test Company
+                                    [address:net\authorize\api\contract\v1\NameAndAddressType:private] => 9999 Street Name
+                                    [city:net\authorize\api\contract\v1\NameAndAddressType:private] => City
+                                    [state:net\authorize\api\contract\v1\NameAndAddressType:private] => VA
+                                    [zip:net\authorize\api\contract\v1\NameAndAddressType:private] => 11111
+                                    [country:net\authorize\api\contract\v1\NameAndAddressType:private] => US
+                                )
+
+                        )
+
+                )
+
+            [shipToList:net\authorize\api\contract\v1\CustomerProfileType:private] => 
+            [merchantCustomerId:net\authorize\api\contract\v1\CustomerProfileBaseType:private] => 
+            [description:net\authorize\api\contract\v1\CustomerProfileBaseType:private] => Customer 2 Test PHP
+            [email:net\authorize\api\contract\v1\CustomerProfileBaseType:private] => test2@email.com
+        )
+
+    [validationMode:net\authorize\api\contract\v1\CreateCustomerProfileRequest:private] => 
+    [merchantAuthentication:net\authorize\api\contract\v1\ANetApiRequestType:private] => net\authorize\api\contract\v1\MerchantAuthenticationType Object
+        (
+            [name:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 9Wq3Hvxt252
+            [transactionKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => xxxx
+            [sessionToken:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [password:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [impersonationAuthentication:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [fingerPrint:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [clientKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [accessToken:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [mobileDeviceId:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+        )
+
+    [clientId:net\authorize\api\contract\v1\ANetApiRequestType:private] => sdk-php-1.9.6
+    [refId:net\authorize\api\contract\v1\ANetApiRequestType:private] => ref1527619562
+)
+
+ Tue, 29 May 2018 20:46:02 +0200 INFO : [execute] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 118) - Request  Serialization End
+ Tue, 29 May 2018 20:46:02 +0200 INFO : [_sendRequest] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 75) -  Url: https://apitest.authorize.net/xml/v1/request.api
+ Tue, 29 May 2018 20:46:02 +0200 INFO : [_sendRequest] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 77) - Request to AnetApi: 
+<?xml version="1.0" encoding="UTF-8"?>
+<createCustomerProfileRequest xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd">
+  <merchantAuthentication>
+    <name><![CDATA[9Wq3Hvxt252]]></name>
+    <transactionKey>xxxx</transactionKey>
+  </merchantAuthentication>
+  <clientId><![CDATA[sdk-php-1.9.6]]></clientId>
+  <refId><![CDATA[ref1527619562]]></refId>
+  <profile>
+    <description><![CDATA[Customer 2 Test PHP]]></description>
+    <email><![CDATA[test2@email.com]]></email>
+    <paymentProfiles>
+      <customerType><![CDATA[individual]]></customerType>
+      <billTo>
+        <firstName><![CDATA[John]]></firstName>
+        <lastName><![CDATA[Doe]]></lastName>
+        <company><![CDATA[Test Company]]></company>
+        <address><![CDATA[9999 Street Name]]></address>
+        <city><![CDATA[City]]></city>
+        <state><![CDATA[VA]]></state>
+        <zip><![CDATA[11111]]></zip>
+        <country><![CDATA[US]]></country>
+        <phoneNumber><![CDATA[5555555555]]></phoneNumber>
+      </billTo>
+      <payment>
+        <opaqueData>
+          <dataDescriptor><![CDATA[COMMON.ACCEPT.INAPP.PAYMENT]]></dataDescriptor>
+          <dataValue><![CDATA[eyJjb2RlIjoiNTBfMl8wNjAwMDUzRTNGOEU0RUNDRDgzNDYyQzFBRTlDQzMxNDUxMDNFOEJENEJBRkE4QkJCODMxM0M4MUUwMTY2OEQxNjVCQzhFODNBQUFERkI5ODRBNjIzMERGNzBDNjI3MzY0RDExNjcyIiwidG9rZW4iOiI5NTI3NjE5NTYyNDI3MzgwNTAzNTAxIiwidiI6IjEuMSJ9]]></dataValue>
+        </opaqueData>
+      </payment>
+      <defaultPaymentProfile>true</defaultPaymentProfile>
+    </paymentProfiles>
+  </profile>
+</createCustomerProfileRequest>
+
+ Tue, 29 May 2018 20:46:02 +0200 INFO : [_sendRequest] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 89) - Sending 'XML' Request type
+ Tue, 29 May 2018 20:46:02 +0200 INFO : [_sendRequest] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 94) - Sending http request via Curl
+ Tue, 29 May 2018 20:46:03 +0200 INFO : [_sendRequest] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 96) - Response from AnetApi: ﻿<?xml version="1.0" encoding="utf-8"?><createCustomerProfileResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd"><refId>ref1527619562</refId><messages><resultCode>Ok</resultCode><message><code>I00001</code><text>Successful.</text></message></messages><customerProfileId>1504594809</customerProfileId><customerPaymentProfileIdList><numericString>1503902947</numericString></customerPaymentProfileIdList><customerShippingAddressIdList /><validationDirectResponseList /></createCustomerProfileResponse>
+ Tue, 29 May 2018 20:46:03 +0200 INFO : [execute] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 128) - Response De-Serialization Begin
+ Tue, 29 May 2018 20:46:03 +0200 INFO : [execute] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 130) - Response De-Serialization End
+ Tue, 29 May 2018 20:47:59 +0200 INFO : [execute] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 114) - Request Serialization Begin
+ Tue, 29 May 2018 20:47:59 +0200 DEBUG : [execute] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 115) - net\authorize\api\contract\v1\CreateCustomerProfileRequest Object
+(
+    [profile:net\authorize\api\contract\v1\CreateCustomerProfileRequest:private] => net\authorize\api\contract\v1\CustomerProfileType Object
+        (
+            [paymentProfiles:net\authorize\api\contract\v1\CustomerProfileType:private] => Array
+                (
+                    [0] => net\authorize\api\contract\v1\CustomerPaymentProfileType Object
+                        (
+                            [payment:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => net\authorize\api\contract\v1\PaymentType Object
+                                (
+                                    [creditCard:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [bankAccount:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [trackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [encryptedTrackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [payPal:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [opaqueData:net\authorize\api\contract\v1\PaymentType:private] => net\authorize\api\contract\v1\OpaqueDataType Object
+                                        (
+                                            [dataDescriptor:net\authorize\api\contract\v1\OpaqueDataType:private] => COMMON.ACCEPT.INAPP.PAYMENT
+                                            [dataValue:net\authorize\api\contract\v1\OpaqueDataType:private] => eyJjb2RlIjoiNTBfMl8wNjAwMDUyMUVEQjE4QUY2RjQzM0QxMDU2MzkzOTYyMjdGMDJBN0Q4MEM2RERFRDA3NjUyMDdCQTBBOUJGQjE0NDMzOEQyNEVCRDQ2NEJFRkQ1RDk3RDZFMjAzNUY0NDJDQUVCQTc2IiwidG9rZW4iOiI5NTI3NjE5Njc4ODAxMzgwOTAzNTAxIiwidiI6IjEuMSJ9
+                                            [dataKey:net\authorize\api\contract\v1\OpaqueDataType:private] => 
+                                        )
+
+                                    [emv:net\authorize\api\contract\v1\PaymentType:private] => 
+                                )
+
+                            [driversLicense:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => 
+                            [taxId:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => 
+                            [defaultPaymentProfile:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => 1
+                            [customerType:net\authorize\api\contract\v1\CustomerPaymentProfileBaseType:private] => individual
+                            [billTo:net\authorize\api\contract\v1\CustomerPaymentProfileBaseType:private] => net\authorize\api\contract\v1\CustomerAddressType Object
+                                (
+                                    [phoneNumber:net\authorize\api\contract\v1\CustomerAddressType:private] => 5555555555
+                                    [faxNumber:net\authorize\api\contract\v1\CustomerAddressType:private] => 
+                                    [email:net\authorize\api\contract\v1\CustomerAddressType:private] => 
+                                    [firstName:net\authorize\api\contract\v1\NameAndAddressType:private] => John
+                                    [lastName:net\authorize\api\contract\v1\NameAndAddressType:private] => 
+                                    [company:net\authorize\api\contract\v1\NameAndAddressType:private] => Test Company
+                                    [address:net\authorize\api\contract\v1\NameAndAddressType:private] => 9999 Street Name
+                                    [city:net\authorize\api\contract\v1\NameAndAddressType:private] => City
+                                    [state:net\authorize\api\contract\v1\NameAndAddressType:private] => VA
+                                    [zip:net\authorize\api\contract\v1\NameAndAddressType:private] => 11111
+                                    [country:net\authorize\api\contract\v1\NameAndAddressType:private] => US
+                                )
+
+                        )
+
+                )
+
+            [shipToList:net\authorize\api\contract\v1\CustomerProfileType:private] => 
+            [merchantCustomerId:net\authorize\api\contract\v1\CustomerProfileBaseType:private] => 
+            [description:net\authorize\api\contract\v1\CustomerProfileBaseType:private] => Customer 2 Test PHP
+            [email:net\authorize\api\contract\v1\CustomerProfileBaseType:private] => test2@email.com
+        )
+
+    [validationMode:net\authorize\api\contract\v1\CreateCustomerProfileRequest:private] => 
+    [merchantAuthentication:net\authorize\api\contract\v1\ANetApiRequestType:private] => net\authorize\api\contract\v1\MerchantAuthenticationType Object
+        (
+            [name:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 9Wq3Hvxt252
+            [transactionKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => xxxx
+            [sessionToken:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [password:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [impersonationAuthentication:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [fingerPrint:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [clientKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [accessToken:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [mobileDeviceId:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+        )
+
+    [clientId:net\authorize\api\contract\v1\ANetApiRequestType:private] => sdk-php-1.9.6
+    [refId:net\authorize\api\contract\v1\ANetApiRequestType:private] => ref1527619678
+)
+
+ Tue, 29 May 2018 20:47:59 +0200 INFO : [execute] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 118) - Request  Serialization End
+ Tue, 29 May 2018 20:47:59 +0200 INFO : [_sendRequest] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 75) -  Url: https://apitest.authorize.net/xml/v1/request.api
+ Tue, 29 May 2018 20:47:59 +0200 INFO : [_sendRequest] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 77) - Request to AnetApi: 
+<?xml version="1.0" encoding="UTF-8"?>
+<createCustomerProfileRequest xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd">
+  <merchantAuthentication>
+    <name><![CDATA[9Wq3Hvxt252]]></name>
+    <transactionKey>xxxx</transactionKey>
+  </merchantAuthentication>
+  <clientId><![CDATA[sdk-php-1.9.6]]></clientId>
+  <refId><![CDATA[ref1527619678]]></refId>
+  <profile>
+    <description><![CDATA[Customer 2 Test PHP]]></description>
+    <email><![CDATA[test2@email.com]]></email>
+    <paymentProfiles>
+      <customerType><![CDATA[individual]]></customerType>
+      <billTo>
+        <firstName><![CDATA[John]]></firstName>
+        <lastName><![CDATA[]]></lastName>
+        <company><![CDATA[Test Company]]></company>
+        <address><![CDATA[9999 Street Name]]></address>
+        <city><![CDATA[City]]></city>
+        <state><![CDATA[VA]]></state>
+        <zip><![CDATA[11111]]></zip>
+        <country><![CDATA[US]]></country>
+        <phoneNumber><![CDATA[5555555555]]></phoneNumber>
+      </billTo>
+      <payment>
+        <opaqueData>
+          <dataDescriptor><![CDATA[COMMON.ACCEPT.INAPP.PAYMENT]]></dataDescriptor>
+          <dataValue><![CDATA[eyJjb2RlIjoiNTBfMl8wNjAwMDUyMUVEQjE4QUY2RjQzM0QxMDU2MzkzOTYyMjdGMDJBN0Q4MEM2RERFRDA3NjUyMDdCQTBBOUJGQjE0NDMzOEQyNEVCRDQ2NEJFRkQ1RDk3RDZFMjAzNUY0NDJDQUVCQTc2IiwidG9rZW4iOiI5NTI3NjE5Njc4ODAxMzgwOTAzNTAxIiwidiI6IjEuMSJ9]]></dataValue>
+        </opaqueData>
+      </payment>
+      <defaultPaymentProfile>true</defaultPaymentProfile>
+    </paymentProfiles>
+  </profile>
+</createCustomerProfileRequest>
+
+ Tue, 29 May 2018 20:47:59 +0200 INFO : [_sendRequest] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 89) - Sending 'XML' Request type
+ Tue, 29 May 2018 20:47:59 +0200 INFO : [_sendRequest] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 94) - Sending http request via Curl
+ Tue, 29 May 2018 20:47:59 +0200 INFO : [_sendRequest] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 96) - Response from AnetApi: ﻿<?xml version="1.0" encoding="utf-8"?><createCustomerProfileResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd"><refId>ref1527619678</refId><messages><resultCode>Error</resultCode><message><code>E00039</code><text>A duplicate record with ID 1504594809 already exists.</text></message></messages><customerPaymentProfileIdList /><customerShippingAddressIdList /><validationDirectResponseList /></createCustomerProfileResponse>
+ Tue, 29 May 2018 20:47:59 +0200 INFO : [execute] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 128) - Response De-Serialization Begin
+ Tue, 29 May 2018 20:47:59 +0200 INFO : [execute] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 130) - Response De-Serialization End
+ Tue, 29 May 2018 20:48:24 +0200 INFO : [execute] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 114) - Request Serialization Begin
+ Tue, 29 May 2018 20:48:24 +0200 DEBUG : [execute] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 115) - net\authorize\api\contract\v1\CreateCustomerProfileRequest Object
+(
+    [profile:net\authorize\api\contract\v1\CreateCustomerProfileRequest:private] => net\authorize\api\contract\v1\CustomerProfileType Object
+        (
+            [paymentProfiles:net\authorize\api\contract\v1\CustomerProfileType:private] => Array
+                (
+                    [0] => net\authorize\api\contract\v1\CustomerPaymentProfileType Object
+                        (
+                            [payment:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => net\authorize\api\contract\v1\PaymentType Object
+                                (
+                                    [creditCard:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [bankAccount:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [trackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [encryptedTrackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [payPal:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [opaqueData:net\authorize\api\contract\v1\PaymentType:private] => net\authorize\api\contract\v1\OpaqueDataType Object
+                                        (
+                                            [dataDescriptor:net\authorize\api\contract\v1\OpaqueDataType:private] => COMMON.ACCEPT.INAPP.PAYMENT
+                                            [dataValue:net\authorize\api\contract\v1\OpaqueDataType:private] => eyJjb2RlIjoiNTBfMl8wNjAwMDUyMEJBQjlBOTQzMUUyMjE3MEFGNUNBQkIyMzBBMkQyRDUyMzQzMjJENjRBNzQyNTVCNkRGRDkxMjlDMEM5MzZERDNFQkM1QzNBRjkwNjFFRTU2MTFGODlEQkZFMjYyNEU3IiwidG9rZW4iOiI5NTI3NjE5NzAzOTk3MzgzNTAzNTAyIiwidiI6IjEuMSJ9
+                                            [dataKey:net\authorize\api\contract\v1\OpaqueDataType:private] => 
+                                        )
+
+                                    [emv:net\authorize\api\contract\v1\PaymentType:private] => 
+                                )
+
+                            [driversLicense:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => 
+                            [taxId:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => 
+                            [defaultPaymentProfile:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => 1
+                            [customerType:net\authorize\api\contract\v1\CustomerPaymentProfileBaseType:private] => individual
+                            [billTo:net\authorize\api\contract\v1\CustomerPaymentProfileBaseType:private] => net\authorize\api\contract\v1\CustomerAddressType Object
+                                (
+                                    [phoneNumber:net\authorize\api\contract\v1\CustomerAddressType:private] => 5555555555
+                                    [faxNumber:net\authorize\api\contract\v1\CustomerAddressType:private] => 
+                                    [email:net\authorize\api\contract\v1\CustomerAddressType:private] => 
+                                    [firstName:net\authorize\api\contract\v1\NameAndAddressType:private] => John
+                                    [lastName:net\authorize\api\contract\v1\NameAndAddressType:private] => 
+                                    [company:net\authorize\api\contract\v1\NameAndAddressType:private] => Test Company
+                                    [address:net\authorize\api\contract\v1\NameAndAddressType:private] => 9999 Street Name
+                                    [city:net\authorize\api\contract\v1\NameAndAddressType:private] => City
+                                    [state:net\authorize\api\contract\v1\NameAndAddressType:private] => VA
+                                    [zip:net\authorize\api\contract\v1\NameAndAddressType:private] => 11111
+                                    [country:net\authorize\api\contract\v1\NameAndAddressType:private] => US
+                                )
+
+                        )
+
+                )
+
+            [shipToList:net\authorize\api\contract\v1\CustomerProfileType:private] => 
+            [merchantCustomerId:net\authorize\api\contract\v1\CustomerProfileBaseType:private] => 
+            [description:net\authorize\api\contract\v1\CustomerProfileBaseType:private] => Customer 2 Test PHP
+            [email:net\authorize\api\contract\v1\CustomerProfileBaseType:private] => test3@email.com
+        )
+
+    [validationMode:net\authorize\api\contract\v1\CreateCustomerProfileRequest:private] => 
+    [merchantAuthentication:net\authorize\api\contract\v1\ANetApiRequestType:private] => net\authorize\api\contract\v1\MerchantAuthenticationType Object
+        (
+            [name:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 9Wq3Hvxt252
+            [transactionKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => xxxx
+            [sessionToken:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [password:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [impersonationAuthentication:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [fingerPrint:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [clientKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [accessToken:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [mobileDeviceId:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+        )
+
+    [clientId:net\authorize\api\contract\v1\ANetApiRequestType:private] => sdk-php-1.9.6
+    [refId:net\authorize\api\contract\v1\ANetApiRequestType:private] => ref1527619704
+)
+
+ Tue, 29 May 2018 20:48:24 +0200 INFO : [execute] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 118) - Request  Serialization End
+ Tue, 29 May 2018 20:48:24 +0200 INFO : [_sendRequest] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 75) -  Url: https://apitest.authorize.net/xml/v1/request.api
+ Tue, 29 May 2018 20:48:24 +0200 INFO : [_sendRequest] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 77) - Request to AnetApi: 
+<?xml version="1.0" encoding="UTF-8"?>
+<createCustomerProfileRequest xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd">
+  <merchantAuthentication>
+    <name><![CDATA[9Wq3Hvxt252]]></name>
+    <transactionKey>xxxx</transactionKey>
+  </merchantAuthentication>
+  <clientId><![CDATA[sdk-php-1.9.6]]></clientId>
+  <refId><![CDATA[ref1527619704]]></refId>
+  <profile>
+    <description><![CDATA[Customer 2 Test PHP]]></description>
+    <email><![CDATA[test3@email.com]]></email>
+    <paymentProfiles>
+      <customerType><![CDATA[individual]]></customerType>
+      <billTo>
+        <firstName><![CDATA[John]]></firstName>
+        <lastName><![CDATA[]]></lastName>
+        <company><![CDATA[Test Company]]></company>
+        <address><![CDATA[9999 Street Name]]></address>
+        <city><![CDATA[City]]></city>
+        <state><![CDATA[VA]]></state>
+        <zip><![CDATA[11111]]></zip>
+        <country><![CDATA[US]]></country>
+        <phoneNumber><![CDATA[5555555555]]></phoneNumber>
+      </billTo>
+      <payment>
+        <opaqueData>
+          <dataDescriptor><![CDATA[COMMON.ACCEPT.INAPP.PAYMENT]]></dataDescriptor>
+          <dataValue><![CDATA[eyJjb2RlIjoiNTBfMl8wNjAwMDUyMEJBQjlBOTQzMUUyMjE3MEFGNUNBQkIyMzBBMkQyRDUyMzQzMjJENjRBNzQyNTVCNkRGRDkxMjlDMEM5MzZERDNFQkM1QzNBRjkwNjFFRTU2MTFGODlEQkZFMjYyNEU3IiwidG9rZW4iOiI5NTI3NjE5NzAzOTk3MzgzNTAzNTAyIiwidiI6IjEuMSJ9]]></dataValue>
+        </opaqueData>
+      </payment>
+      <defaultPaymentProfile>true</defaultPaymentProfile>
+    </paymentProfiles>
+  </profile>
+</createCustomerProfileRequest>
+
+ Tue, 29 May 2018 20:48:24 +0200 INFO : [_sendRequest] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 89) - Sending 'XML' Request type
+ Tue, 29 May 2018 20:48:24 +0200 INFO : [_sendRequest] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 94) - Sending http request via Curl
+ Tue, 29 May 2018 20:48:25 +0200 INFO : [_sendRequest] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 96) - Response from AnetApi: ﻿<?xml version="1.0" encoding="utf-8"?><createCustomerProfileResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd"><refId>ref1527619704</refId><messages><resultCode>Ok</resultCode><message><code>I00001</code><text>Successful.</text></message></messages><customerProfileId>1504595014</customerProfileId><customerPaymentProfileIdList><numericString>1503902985</numericString></customerPaymentProfileIdList><customerShippingAddressIdList /><validationDirectResponseList /></createCustomerProfileResponse>
+ Tue, 29 May 2018 20:48:25 +0200 INFO : [execute] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 128) - Response De-Serialization Begin
+ Tue, 29 May 2018 20:48:25 +0200 INFO : [execute] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 130) - Response De-Serialization End
+ Tue, 29 May 2018 20:55:01 +0200 INFO : [execute] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 114) - Request Serialization Begin
+ Tue, 29 May 2018 20:55:01 +0200 DEBUG : [execute] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 115) - net\authorize\api\contract\v1\CreateCustomerProfileRequest Object
+(
+    [profile:net\authorize\api\contract\v1\CreateCustomerProfileRequest:private] => net\authorize\api\contract\v1\CustomerProfileType Object
+        (
+            [paymentProfiles:net\authorize\api\contract\v1\CustomerProfileType:private] => Array
+                (
+                    [0] => net\authorize\api\contract\v1\CustomerPaymentProfileType Object
+                        (
+                            [payment:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => net\authorize\api\contract\v1\PaymentType Object
+                                (
+                                    [creditCard:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [bankAccount:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [trackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [encryptedTrackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [payPal:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [opaqueData:net\authorize\api\contract\v1\PaymentType:private] => net\authorize\api\contract\v1\OpaqueDataType Object
+                                        (
+                                            [dataDescriptor:net\authorize\api\contract\v1\OpaqueDataType:private] => COMMON.ACCEPT.INAPP.PAYMENT
+                                            [dataValue:net\authorize\api\contract\v1\OpaqueDataType:private] => eyJjb2RlIjoiNTBfMl8wNjAwMDUzRTNCNzI3MERFN0QyNzhEQzU0MURGQUY5ODJEQzIyMjZENEEwNTJGRDJCQkVBNERFNUY2MTdBODA2Mzk0RTA2MzkxMjEwRkZDNjIxM0I0M0U3NjJFMEIyNjUyMzhCNkJGIiwidG9rZW4iOiI5NTI3NjIwMTAwOTMwMzgyOTAzNTAxIiwidiI6IjEuMSJ9
+                                            [dataKey:net\authorize\api\contract\v1\OpaqueDataType:private] => 
+                                        )
+
+                                    [emv:net\authorize\api\contract\v1\PaymentType:private] => 
+                                )
+
+                            [driversLicense:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => 
+                            [taxId:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => 
+                            [defaultPaymentProfile:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => 1
+                            [customerType:net\authorize\api\contract\v1\CustomerPaymentProfileBaseType:private] => individual
+                            [billTo:net\authorize\api\contract\v1\CustomerPaymentProfileBaseType:private] => net\authorize\api\contract\v1\CustomerAddressType Object
+                                (
+                                    [phoneNumber:net\authorize\api\contract\v1\CustomerAddressType:private] => 5555555555
+                                    [faxNumber:net\authorize\api\contract\v1\CustomerAddressType:private] => 
+                                    [email:net\authorize\api\contract\v1\CustomerAddressType:private] => 
+                                    [firstName:net\authorize\api\contract\v1\NameAndAddressType:private] => John
+                                    [lastName:net\authorize\api\contract\v1\NameAndAddressType:private] => Doe
+                                    [company:net\authorize\api\contract\v1\NameAndAddressType:private] => Test Company
+                                    [address:net\authorize\api\contract\v1\NameAndAddressType:private] => 9999 Street Name
+                                    [city:net\authorize\api\contract\v1\NameAndAddressType:private] => City
+                                    [state:net\authorize\api\contract\v1\NameAndAddressType:private] => VA
+                                    [zip:net\authorize\api\contract\v1\NameAndAddressType:private] => 11111
+                                    [country:net\authorize\api\contract\v1\NameAndAddressType:private] => US
+                                )
+
+                        )
+
+                )
+
+            [shipToList:net\authorize\api\contract\v1\CustomerProfileType:private] => 
+            [merchantCustomerId:net\authorize\api\contract\v1\CustomerProfileBaseType:private] => 
+            [description:net\authorize\api\contract\v1\CustomerProfileBaseType:private] => Customer 2 Test PHP
+            [email:net\authorize\api\contract\v1\CustomerProfileBaseType:private] => test@email.com
+        )
+
+    [validationMode:net\authorize\api\contract\v1\CreateCustomerProfileRequest:private] => 
+    [merchantAuthentication:net\authorize\api\contract\v1\ANetApiRequestType:private] => net\authorize\api\contract\v1\MerchantAuthenticationType Object
+        (
+            [name:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 9Wq3Hvxt252
+            [transactionKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => xxxx
+            [sessionToken:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [password:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [impersonationAuthentication:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [fingerPrint:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [clientKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [accessToken:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [mobileDeviceId:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+        )
+
+    [clientId:net\authorize\api\contract\v1\ANetApiRequestType:private] => sdk-php-1.9.6
+    [refId:net\authorize\api\contract\v1\ANetApiRequestType:private] => ref1527620101
+)
+
+ Tue, 29 May 2018 20:55:01 +0200 INFO : [execute] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 118) - Request  Serialization End
+ Tue, 29 May 2018 20:55:01 +0200 INFO : [_sendRequest] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 75) -  Url: https://apitest.authorize.net/xml/v1/request.api
+ Tue, 29 May 2018 20:55:01 +0200 INFO : [_sendRequest] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 77) - Request to AnetApi: 
+<?xml version="1.0" encoding="UTF-8"?>
+<createCustomerProfileRequest xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd">
+  <merchantAuthentication>
+    <name><![CDATA[9Wq3Hvxt252]]></name>
+    <transactionKey>xxxx</transactionKey>
+  </merchantAuthentication>
+  <clientId><![CDATA[sdk-php-1.9.6]]></clientId>
+  <refId><![CDATA[ref1527620101]]></refId>
+  <profile>
+    <description><![CDATA[Customer 2 Test PHP]]></description>
+    <email><![CDATA[test@email.com]]></email>
+    <paymentProfiles>
+      <customerType><![CDATA[individual]]></customerType>
+      <billTo>
+        <firstName><![CDATA[John]]></firstName>
+        <lastName><![CDATA[Doe]]></lastName>
+        <company><![CDATA[Test Company]]></company>
+        <address><![CDATA[9999 Street Name]]></address>
+        <city><![CDATA[City]]></city>
+        <state><![CDATA[VA]]></state>
+        <zip><![CDATA[11111]]></zip>
+        <country><![CDATA[US]]></country>
+        <phoneNumber><![CDATA[5555555555]]></phoneNumber>
+      </billTo>
+      <payment>
+        <opaqueData>
+          <dataDescriptor><![CDATA[COMMON.ACCEPT.INAPP.PAYMENT]]></dataDescriptor>
+          <dataValue><![CDATA[eyJjb2RlIjoiNTBfMl8wNjAwMDUzRTNCNzI3MERFN0QyNzhEQzU0MURGQUY5ODJEQzIyMjZENEEwNTJGRDJCQkVBNERFNUY2MTdBODA2Mzk0RTA2MzkxMjEwRkZDNjIxM0I0M0U3NjJFMEIyNjUyMzhCNkJGIiwidG9rZW4iOiI5NTI3NjIwMTAwOTMwMzgyOTAzNTAxIiwidiI6IjEuMSJ9]]></dataValue>
+        </opaqueData>
+      </payment>
+      <defaultPaymentProfile>true</defaultPaymentProfile>
+    </paymentProfiles>
+  </profile>
+</createCustomerProfileRequest>
+
+ Tue, 29 May 2018 20:55:01 +0200 INFO : [_sendRequest] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 89) - Sending 'XML' Request type
+ Tue, 29 May 2018 20:55:01 +0200 INFO : [_sendRequest] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 94) - Sending http request via Curl
+ Tue, 29 May 2018 20:55:01 +0200 INFO : [_sendRequest] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 96) - Response from AnetApi: ﻿<?xml version="1.0" encoding="utf-8"?><createCustomerProfileResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd"><refId>ref1527620101</refId><messages><resultCode>Ok</resultCode><message><code>I00001</code><text>Successful.</text></message></messages><customerProfileId>1504595470</customerProfileId><customerPaymentProfileIdList><numericString>1503903068</numericString></customerPaymentProfileIdList><customerShippingAddressIdList /><validationDirectResponseList /></createCustomerProfileResponse>
+ Tue, 29 May 2018 20:55:01 +0200 INFO : [execute] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 128) - Response De-Serialization Begin
+ Tue, 29 May 2018 20:55:02 +0200 INFO : [execute] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 130) - Response De-Serialization End
+ Tue, 29 May 2018 20:55:13 +0200 INFO : [execute] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 114) - Request Serialization Begin
+ Tue, 29 May 2018 20:55:13 +0200 DEBUG : [execute] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 115) - net\authorize\api\contract\v1\CreateCustomerProfileRequest Object
+(
+    [profile:net\authorize\api\contract\v1\CreateCustomerProfileRequest:private] => net\authorize\api\contract\v1\CustomerProfileType Object
+        (
+            [paymentProfiles:net\authorize\api\contract\v1\CustomerProfileType:private] => Array
+                (
+                    [0] => net\authorize\api\contract\v1\CustomerPaymentProfileType Object
+                        (
+                            [payment:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => net\authorize\api\contract\v1\PaymentType Object
+                                (
+                                    [creditCard:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [bankAccount:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [trackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [encryptedTrackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [payPal:net\authorize\api\contract\v1\PaymentType:private] => 
+                                    [opaqueData:net\authorize\api\contract\v1\PaymentType:private] => net\authorize\api\contract\v1\OpaqueDataType Object
+                                        (
+                                            [dataDescriptor:net\authorize\api\contract\v1\OpaqueDataType:private] => COMMON.ACCEPT.INAPP.PAYMENT
+                                            [dataValue:net\authorize\api\contract\v1\OpaqueDataType:private] => eyJjb2RlIjoiNTBfMl8wNjAwMDUyM0I4RjlFRDQ0MTg5Q0VDNzlEOUJCMDIyOUEwMUJENjRDNDA4M0QyQ0ZGNjRBMkJFRDU2OTdDQUExNDNGQTdBRDcwNkY3MTgxQzcwQkRGNEVGMzhBMDRBOTQzN0EzMDU0IiwidG9rZW4iOiI5NTI3NjIwMTEzMzEwMzg1NjAzNTAyIiwidiI6IjEuMSJ9
+                                            [dataKey:net\authorize\api\contract\v1\OpaqueDataType:private] => 
+                                        )
+
+                                    [emv:net\authorize\api\contract\v1\PaymentType:private] => 
+                                )
+
+                            [driversLicense:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => 
+                            [taxId:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => 
+                            [defaultPaymentProfile:net\authorize\api\contract\v1\CustomerPaymentProfileType:private] => 1
+                            [customerType:net\authorize\api\contract\v1\CustomerPaymentProfileBaseType:private] => individual
+                            [billTo:net\authorize\api\contract\v1\CustomerPaymentProfileBaseType:private] => net\authorize\api\contract\v1\CustomerAddressType Object
+                                (
+                                    [phoneNumber:net\authorize\api\contract\v1\CustomerAddressType:private] => 5555555555
+                                    [faxNumber:net\authorize\api\contract\v1\CustomerAddressType:private] => 
+                                    [email:net\authorize\api\contract\v1\CustomerAddressType:private] => 
+                                    [firstName:net\authorize\api\contract\v1\NameAndAddressType:private] => John
+                                    [lastName:net\authorize\api\contract\v1\NameAndAddressType:private] => Doe
+                                    [company:net\authorize\api\contract\v1\NameAndAddressType:private] => Test Company
+                                    [address:net\authorize\api\contract\v1\NameAndAddressType:private] => 9999 Street Name
+                                    [city:net\authorize\api\contract\v1\NameAndAddressType:private] => City
+                                    [state:net\authorize\api\contract\v1\NameAndAddressType:private] => VA
+                                    [zip:net\authorize\api\contract\v1\NameAndAddressType:private] => 11111
+                                    [country:net\authorize\api\contract\v1\NameAndAddressType:private] => US
+                                )
+
+                        )
+
+                )
+
+            [shipToList:net\authorize\api\contract\v1\CustomerProfileType:private] => 
+            [merchantCustomerId:net\authorize\api\contract\v1\CustomerProfileBaseType:private] => 
+            [description:net\authorize\api\contract\v1\CustomerProfileBaseType:private] => Customer 2 Test PHP
+            [email:net\authorize\api\contract\v1\CustomerProfileBaseType:private] => test@email.com
+        )
+
+    [validationMode:net\authorize\api\contract\v1\CreateCustomerProfileRequest:private] => 
+    [merchantAuthentication:net\authorize\api\contract\v1\ANetApiRequestType:private] => net\authorize\api\contract\v1\MerchantAuthenticationType Object
+        (
+            [name:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 9Wq3Hvxt252
+            [transactionKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => xxxx
+            [sessionToken:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [password:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [impersonationAuthentication:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [fingerPrint:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [clientKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [accessToken:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [mobileDeviceId:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+        )
+
+    [clientId:net\authorize\api\contract\v1\ANetApiRequestType:private] => sdk-php-1.9.6
+    [refId:net\authorize\api\contract\v1\ANetApiRequestType:private] => ref1527620113
+)
+
+ Tue, 29 May 2018 20:55:13 +0200 INFO : [execute] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 118) - Request  Serialization End
+ Tue, 29 May 2018 20:55:13 +0200 INFO : [_sendRequest] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 75) -  Url: https://apitest.authorize.net/xml/v1/request.api
+ Tue, 29 May 2018 20:55:13 +0200 INFO : [_sendRequest] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 77) - Request to AnetApi: 
+<?xml version="1.0" encoding="UTF-8"?>
+<createCustomerProfileRequest xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd">
+  <merchantAuthentication>
+    <name><![CDATA[9Wq3Hvxt252]]></name>
+    <transactionKey>xxxx</transactionKey>
+  </merchantAuthentication>
+  <clientId><![CDATA[sdk-php-1.9.6]]></clientId>
+  <refId><![CDATA[ref1527620113]]></refId>
+  <profile>
+    <description><![CDATA[Customer 2 Test PHP]]></description>
+    <email><![CDATA[test@email.com]]></email>
+    <paymentProfiles>
+      <customerType><![CDATA[individual]]></customerType>
+      <billTo>
+        <firstName><![CDATA[John]]></firstName>
+        <lastName><![CDATA[Doe]]></lastName>
+        <company><![CDATA[Test Company]]></company>
+        <address><![CDATA[9999 Street Name]]></address>
+        <city><![CDATA[City]]></city>
+        <state><![CDATA[VA]]></state>
+        <zip><![CDATA[11111]]></zip>
+        <country><![CDATA[US]]></country>
+        <phoneNumber><![CDATA[5555555555]]></phoneNumber>
+      </billTo>
+      <payment>
+        <opaqueData>
+          <dataDescriptor><![CDATA[COMMON.ACCEPT.INAPP.PAYMENT]]></dataDescriptor>
+          <dataValue><![CDATA[eyJjb2RlIjoiNTBfMl8wNjAwMDUyM0I4RjlFRDQ0MTg5Q0VDNzlEOUJCMDIyOUEwMUJENjRDNDA4M0QyQ0ZGNjRBMkJFRDU2OTdDQUExNDNGQTdBRDcwNkY3MTgxQzcwQkRGNEVGMzhBMDRBOTQzN0EzMDU0IiwidG9rZW4iOiI5NTI3NjIwMTEzMzEwMzg1NjAzNTAyIiwidiI6IjEuMSJ9]]></dataValue>
+        </opaqueData>
+      </payment>
+      <defaultPaymentProfile>true</defaultPaymentProfile>
+    </paymentProfiles>
+  </profile>
+</createCustomerProfileRequest>
+
+ Tue, 29 May 2018 20:55:13 +0200 INFO : [_sendRequest] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 89) - Sending 'XML' Request type
+ Tue, 29 May 2018 20:55:13 +0200 INFO : [_sendRequest] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 94) - Sending http request via Curl
+ Tue, 29 May 2018 20:55:14 +0200 INFO : [_sendRequest] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 96) - Response from AnetApi: ﻿<?xml version="1.0" encoding="utf-8"?><createCustomerProfileResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd"><refId>ref1527620113</refId><messages><resultCode>Error</resultCode><message><code>E00039</code><text>A duplicate record with ID 1504595470 already exists.</text></message></messages><customerPaymentProfileIdList /><customerShippingAddressIdList /><validationDirectResponseList /></createCustomerProfileResponse>
+ Tue, 29 May 2018 20:55:14 +0200 INFO : [execute] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 128) - Response De-Serialization Begin
+ Tue, 29 May 2018 20:55:14 +0200 INFO : [execute] (C:\xampp\htdocs\php\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 130) - Response De-Serialization End

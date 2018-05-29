@@ -7,7 +7,8 @@ use net\authorize\api\controller as AnetController;
 
 define("AUTHORIZENET_LOG_FILE", "phplog");
 
-if(isset($_POST['email']) && isset($_POST['descriptor']) && isset($_POST['value'])) {
+if(isset($_POST['email']) && isset($_POST['descriptor']) && isset($_POST['value']))
+{
     createCustomerProfile($_POST['email']);
 }
 
@@ -77,14 +78,58 @@ function createCustomerProfile($email)
     $controller = new AnetController\CreateCustomerProfileController($request);
     $response = $controller->executeWithApiResponse(\net\authorize\api\constants\ANetEnvironment::SANDBOX);
 
-    if (($response != null) && ($response->getMessages()->getResultCode() == "Ok")) {
+    if (($response != null) && ($response->getMessages()->getResultCode() == "Ok"))
+    {
         echo "Succesfully created customer profile : " . $response->getCustomerProfileId() . "<br>";
         $paymentProfiles = $response->getCustomerPaymentProfileIdList();
         echo "SUCCESS:<br>PAYMENT PROFILE ID : " . $paymentProfiles[0] . "<br>";
-    } else {
+        echo "<br>Validating payment:<br>";
+        validateCustomerPaymentProfile($response->getCustomerProfileId(),$paymentProfiles[0]);
+    }
+    else
+    {
         echo "ERROR :  Invalid response<br>";
         $errorMessages = $response->getMessages()->getMessage();
         echo "Response : " . $errorMessages[0]->getCode() . "  " .$errorMessages[0]->getText() . "<br>";
+    }
+    return $response;
+}
+
+function validateCustomerPaymentProfile($profileId, $paymentId)
+{
+    /* Create a merchantAuthenticationType object with authentication details
+    retrieved from the constants file */
+    $merchantAuthentication = new AnetAPI\MerchantAuthenticationType();
+    $merchantAuthentication->setName(MERCHANT_LOGIN_ID);
+    $merchantAuthentication->setTransactionKey(TRANSACTION_KEY);
+
+    // Set the transaction's refId
+    $refId = 'ref' . time();
+
+    // Use an existing payment profile ID for this Merchant name and Transaction key
+    //validationmode tests , does not send an email receipt
+    $validationmode = "testMode";
+
+    $request = new AnetAPI\ValidateCustomerPaymentProfileRequest();
+
+    $request->setMerchantAuthentication($merchantAuthentication);
+    $request->setCustomerProfileId($profileId);
+    $request->setCustomerPaymentProfileId($paymentId);
+    $request->setValidationMode($validationmode);
+
+    $controller = new AnetController\ValidateCustomerPaymentProfileController($request);
+    $response = $controller->executeWithApiResponse( \net\authorize\api\constants\ANetEnvironment::SANDBOX);
+
+    if (($response != null) && ($response->getMessages()->getResultCode() == "Ok") )
+    {
+        $validationMessages = $response->getMessages()->getMessage();
+        echo "Response : " . $validationMessages[0]->getCode() . "  " .$validationMessages[0]->getText() . "\n";
+    }
+    else
+    {
+        echo "ERROR :  Validate Customer Payment Profile: Invalid response\n";
+        $errorMessages = $response->getMessages()->getMessage();
+        echo "Response : " . $errorMessages[0]->getCode() . "  " .$errorMessages[0]->getText() . "\n";
     }
     return $response;
 }

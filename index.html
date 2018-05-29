@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Sample form</title>
+        <meta charset="utf-8" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+    <body>
+
+        <script type="text/javascript"
+                src="https://jstest.authorize.net/v3/AcceptUI.js"
+                charset="utf-8">
+        </script>
+        <script type="text/javascript"
+                src="js/cardHandler.js">
+        </script>
+        <script type="text/javascript"
+                src="js/newProfile.js">
+        </script>
+
+        <script type="text/javascript">
+            function chargeCard() {
+                var profileId = document.getElementById("profile").value;
+                var paymentId = document.getElementById("payment").value;
+                var amount = document.getElementById("amount").value;
+                var temp = document.getElementById("items");
+                var item = temp.options[temp.selectedIndex].text;
+                $.ajax({
+                    url: "php/chargeCard.php",
+                    type: 'post',
+                    data: { "profileId": profileId, "paymentId": paymentId, "amount": amount},
+                    success: function(response) {
+                        document.getElementById("demo3").innerHTML =
+                            item +
+                            response;
+                    },
+                    failure: function(error) {
+                        document.getElementById("demo3").innerHTML = error;
+                    }
+                });
+            }
+        </script>
+
+
+        <div class="left">
+            Create New Profile
+            <form id="paymentForm"
+                  method="POST"
+                  action="javascript:submitPost()">
+                <input type="text" name="firstName" id="firstName" placeholder="First Name"/> <br>
+                <input type="text" name="lastName" id="lastName" placeholder="Last Name"/> <br>
+                <input type="text" name="company" id="company" placeholder="Company" /> <br>
+                <input type="text" name="address" id="address" placeholder="Address" /> <br>
+                <input type="text" name="city" id="city" placeholder="City" /> <br>
+                <input type="text" name="state" id="state" placeholder="State" /> <br>
+                <input type="text" name="zip" id="zip" placeholder="Zip Code" /> <br>
+                <input type="text" name="country" id="country" placeholder="Country" /> <br>
+                <input type="text" name="phone" id="phone" placeholder="Phone Number" /> <br>
+                <input type="text" name="email" id="email" placeholder="Email" required />* <br>
+                <input type="hidden" name="dataValue" id="dataValue" />
+                <input type="hidden" name="dataDescriptor" id="dataDescriptor" />
+                <button type="button"
+                        class="AcceptUI"
+                        data-billingAddressOptions='{"show":false, "required":false}' 
+                        data-apiLoginID="9Wq3Hvxt252"
+                        data-clientKey="9385VFB489azG4MSseS8GrFPu6728d9x2pg52Gbh597AL6Ups52QuhkpWg5LdC42"
+                        data-acceptU:w
+                        data-acceptUIFormBtnTxt="Submit" 
+                        data-acceptUIFormHeaderTxt="Card Information" 
+                        data-responseHandler="responseHandler">Submit
+                </button>
+            </form>
+            * Required field
+
+            <p id="test"></p>
+            <p id="demo"></p>
+            <p id="demo2"></p>
+        </div>
+
+        <div class="right">
+            Charge Profile Payment Method
+            <form id="paymentForm"
+                  method="POST"
+                  action="javascript:chargeCard()">
+                <input type="text" name="amount" id="amount" placeholder="Amount" required />* <br>
+                <select id="items">
+                    <option selected="selected">Select an option</option>
+                    <option value="1">Item 1 A</option>
+                    <option value="2">Item 2 B</option>
+                </select><br>
+                <input type="text" name="profile" id="profile" placeholder="Profile ID" required />* <br>
+                <input type="text" name="payment" id="payment" placeholder="Payment ID" required />* <br>
+                <input type="hidden" name="dataValue" id="dataValue" />
+                <input type="hidden" name="dataDescriptor" id="dataDescriptor" />
+                <button type="submit" value="Submit">Submit</button>
+            </form>
+            * Required field
+            <p id="demo3"></p>
+
+        </div>
+
+
+    </body>
+</html>

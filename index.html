@@ -13,7 +13,7 @@
         <!-- Material Design Bootstrap -->
         <link href="css/mdbootstrap/mdb.min.css" rel="stylesheet">
         <!-- Personal CSS -->
-        <link href="css/mdbootstrap/style.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
     </head>
 
     <body>
@@ -30,6 +30,8 @@
         <script type="text/javascript"
                 src="js/cardHandler.js">
         </script>
+
+        <div class="bg">
 
         <nav class="navbar navbar-expand-lg navbar-dark primary-color">
             <!-- Navbar brand -->
@@ -63,60 +65,78 @@
         <!--<div class="edge-header primary-color"></div>-->
 
         <div class="collapse mt-5" id="initialHeader">
-            <div class="row">
+            <div class="row mx-auto">
                 <div class="col-lg-6 mx-auto">
-                    <h2 class="h2-responsive text-muted mb-5" align="center">Please select a form.</h2>
-                    <h5 class="h5-responsive text-muted mb-3">
-                        Note: This is a test application. Transactions/profiles occur in sandbox mode only and do not incur real transactions.
-                    </h5>
-                    <h5 class="h5-responsive text-muted">
-                        The following are valid test credit card numbers:
-                    </h5>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-lg-12 mx-auto">
+                                    <h2 class="h2-responsive text-muted" align="center">Please select a form.</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-4 mx-auto">
-                    <table class="table table-borderless table-hover text-muted">
-                        <tbody>
-                            <tr>
-                                <td scope="row">American Express</th>
-                                <td>370000000000002</td>
-                            </tr>
-                            <tr>
-                                <td scope="row">Discover</td>
-                                <td>6011000000000012</td>
-                            </tr>
-                            <tr>
-                                <td scope="row">JCB</td>
-                                <td>3088000000000017</td>
-                            </tr>
-                            <tr>
-                                <td scope="row">Diners Club/Carte Blanche</td>
-                                <td>38000000000006</td>
-                            </tr>
-                            <tr>
-                                <td scope="row">Visa</td>
-                                <td>
-                                    4007000000027<br>
-                                    4012888818888<br>
-                                    4111111111111111
-                                </td>
-                            </tr>
-                            <tr>
-                                <td scope="row">Mastercard</td>
-                                <td>
-                                    5424000000000015<br>
-                                    2223000010309703<br>
-                                    2223000010309711
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <div class="row">
+            <div class="row mx-auto">
                 <div class="col-lg-6 mx-auto">
-                    <h6 class="h6-responsive text-muted">For more testing information, please visit <a href="https://developer.authorize.net/hello_world/testing_guide/" target="_blank">here</a>.</h6>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-lg-12 mx-auto">
+                                    <h5 class="h5-responsive text-muted mb-3">
+                                        Note: This is a test application. Transactions/profiles occur in sandbox mode only and do not incur real transactions.
+                                    </h5>
+                                    <h5 class="h5-responsive text-muted">
+                                        The following are valid test credit card numbers:
+                                    </h5>
+                                </div>
+                                <div class="col-lg-10 mx-auto">
+                                    <table class="table table-borderless table-hover text-muted">
+                                        <tbody>
+                                            <tr>
+                                                <td scope="row">American Express</th>
+                                                <td>370000000000002</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Discover</td>
+                                                <td>6011000000000012</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">JCB</td>
+                                                <td>3088000000000017</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Diners Club/Carte Blanche</td>
+                                                <td>38000000000006</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Visa</td>
+                                                <td>
+                                                    4007000000027<br>
+                                                    4012888818888<br>
+                                                    4111111111111111
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Mastercard</td>
+                                                <td>
+                                                    5424000000000015<br>
+                                                    2223000010309703<br>
+                                                    2223000010309711
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 mx-auto">
+                                    <h6 class="h6-responsive text-muted">For more testing information, please visit <a href="https://developer.authorize.net/hello_world/testing_guide/" target="_blank">here</a>.</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -286,6 +306,7 @@
             </div>
         </div>
         </div>
+        </div>
     <!-- SCRIPTS -->
     <!-- JQuery -->
     <script type="text/javascript" src="js/mdbootstrap/jquery-3.3.1.min.js"></script>
@@ -297,6 +318,7 @@
     <script type="text/javascript" src="js/mdbootstrap/mdb.min.js"></script>
 
     <script type="text/javascript">
+        /* Collapse functions for the forms */
         $("#initialHeader").collapse('show');
         $("#showInitial").click(function(){
             $(".collapse").collapse('hide');
@@ -311,6 +333,7 @@
             $("#createProfile").collapse('show');
         });
         
+        /* Clean up after a reset button is clicked */
         $("#resetCharge").click(function(){
             $("#chargeForm label").removeClass("active");
             $("#demo3").html("");

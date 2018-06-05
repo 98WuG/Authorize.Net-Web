@@ -1,0 +1,7 @@
+css/* linguist-vendored=true
+js/modules/* linguist-vendored=true
+js/mdbootstrap/* linguist-vendored=true
+css/mdboostrap/* linguist-vendored=true
+scss/* linguist-vendored=true
+php/vendor/* linguist-vendored=true
+img/* linguist-vendored=true

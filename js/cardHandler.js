@@ -15,6 +15,8 @@ function responseHandler(response) {
 	document.getElementById("demo").innerHTML = "";
 	document.getElementById("demo2").innerHTML = "";
 
+	document.getElementById("demo").innerHTML= "Processing...";
+
 	// If no email is filled in, stop immediately
 	if (document.getElementById("email").value === "") {
 		document.getElementById("demo").innerHTML = "Error: No email provided.";
@@ -48,5 +50,6 @@ function paymentFormUpdate(opaqueData) {
 	document.getElementById("dataDescriptor").value = opaqueData.dataDescriptor;
 	document.getElementById("dataValue").value = opaqueData.dataValue;
 
-	document.getElementById("paymentForm").submit();
+	//document.getElementById("paymentForm").submit();
+	newProfile();
 }

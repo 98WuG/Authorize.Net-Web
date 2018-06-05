@@ -61,6 +61,10 @@
         </nav>
         <!--<div class="edge-header primary-color"></div>-->
 
+        <div class="collapse mt-5" id="initialHeader" align="center">
+            <h2 class="h2-responsive text-muted">Please select a form.</h1>
+        </div>
+
         <div class="collapse in" id="chargeCard">
         <!--<div class="container free-bird">-->
         <div class="container mt-4 mb-2">
@@ -240,14 +244,14 @@
     <script type="text/javascript" src="js/mdb.min.js"></script>
 
     <script type="text/javascript">
-        $("#chargeCard").collapse('show');
-        $("#showProfile").click(function(){
-            $("#createProfile").collapse('show');
-            $("#chargeCard").collapse('hide');
-        });
+        $("#initialHeader").collapse('show');
         $("#showCharge").click(function(){
+            $(".collapse").collapse('hide');
             $("#chargeCard").collapse('show');
-            $("#createProfile").collapse('hide');
+        });
+        $("#showProfile").click(function(){
+            $(".collapse").collapse('hide');
+            $("#createProfile").collapse('show');
         });
         
         $("#resetCharge").click(function(){

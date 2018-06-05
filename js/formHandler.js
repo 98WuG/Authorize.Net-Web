@@ -11,7 +11,6 @@ function newProfile() {
 	var country = document.getElementById("country").value;
 	var phone = document.getElementById("phone").value;
 	var email = document.getElementById("email").value;
-	document.getElementById("demo").innerHTML= "hello";
 
 	$.ajax({
 		url: "php/newProfile.php",

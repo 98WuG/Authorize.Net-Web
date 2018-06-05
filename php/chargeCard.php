@@ -31,19 +31,21 @@ function chargeCustomerProfile($profileid, $paymentprofileid, $amount)
 	$invoice = rand(0,1000000);
 	$order->setInvoiceNumber($invoice);
 
+	/*
 	$lineItem = new AnetAPI\LineItemType();
 	$lineItem->setItemId($_POST['itemId']);
 	$lineItem->setName($_POST['item']);
 	$lineItem->setQuantity(1);
 	$lineItem->setUnitPrice($amount);
 	$lineItem_Array[] = $lineItem;
+	 */
 
 	$transactionRequestType = new AnetAPI\TransactionRequestType();
 	$transactionRequestType->setTransactionType( "authCaptureTransaction"); 
 	$transactionRequestType->setAmount($amount);
 	$transactionRequestType->setProfile($profileToCharge);
 	$transactionRequestType->setOrder($order);
-	$transactionRequestType->setLineItems($lineItem_Array);
+	//$transactionRequestType->setLineItems($lineItem_Array);
 
 	$request = new AnetAPI\CreateTransactionRequest();
 	$request->setMerchantAuthentication($merchantAuthentication);

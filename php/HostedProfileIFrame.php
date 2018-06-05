@@ -17,8 +17,8 @@
 
 	function getAnAcceptPaymentPage()
 	{
-			/* Create a merchantAuthenticationType object with authentication details
-			retrieved from the constants file */
+		/* Create a merchantAuthenticationType object with authentication details
+		retrieved from the constants file */
 		$merchantAuthentication = new AnetAPI\MerchantAuthenticationType();
 		$merchantAuthentication->setName(MERCHANT_LOGIN_ID);
 		$merchantAuthentication->setTransactionKey(TRANSACTION_KEY);

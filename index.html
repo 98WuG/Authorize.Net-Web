@@ -2,10 +2,18 @@
 <html>
 
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>Credit Card Testing</title>
-        <meta charset="utf-8" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <!-- Material Design Bootstrap -->
+        <link href="css/mdb.min.css" rel="stylesheet">
+        <!-- Personal CSS -->
+        <link href="css/style.css" rel="stylesheet">
     </head>
 
     <body>
@@ -23,63 +31,220 @@
         </script>
 
 
-        <div class="left">
-            Create New Profile
-            <form id="paymentForm"
-                  method="POST"
-                  action="javascript:newProfile()">
-                <input type="text" name="firstName" id="firstName" placeholder="First Name"/> <br>
-                <input type="text" name="lastName" id="lastName" placeholder="Last Name"/> <br>
-                <input type="text" name="company" id="company" placeholder="Company" /> <br>
-                <input type="text" name="address" id="address" placeholder="Address" /> <br>
-                <input type="text" name="city" id="city" placeholder="City" /> <br>
-                <input type="text" name="state" id="state" placeholder="State" /> <br>
-                <input type="text" name="zip" id="zip" placeholder="Zip Code" /> <br>
-                <input type="text" name="country" id="country" placeholder="Country" /> <br>
-                <input type="text" name="phone" id="phone" placeholder="Phone Number" /> <br>
-                <input type="text" name="email" id="email" placeholder="Email" required />* <br>
-                <input type="hidden" name="dataValue" id="dataValue" />
-                <input type="hidden" name="dataDescriptor" id="dataDescriptor" />
-                <button type="button"
-                        class="AcceptUI"
-                        data-billingAddressOptions='{"show":false, "required":false}' 
-                        data-apiLoginID="9Wq3Hvxt252"
-                        data-clientKey="9385VFB489azG4MSseS8GrFPu6728d9x2pg52Gbh597AL6Ups52QuhkpWg5LdC42"
-                        data-acceptU:w
-                        data-acceptUIFormBtnTxt="Submit" 
-                        data-acceptUIFormHeaderTxt="Card Information" 
-                        data-responseHandler="responseHandler">Submit
-                </button>
-            </form>
-            * Required field
+        <nav class="navbar navbar-expand-lg navbar-dark primary-color-dark">
+            <!-- Navbar brand -->
+            <a class="navbar-brand" href="">Credit Card Testing</a>
 
-            <p id="test"></p>
-            <p id="demo"></p>
-            <p id="demo2"></p>
+            <!-- Collapse button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Collapsible content -->
+            <div class="collapse navbar-collapse" id="basicExampleNav">
+
+                <!-- Links -->
+                <ul class="navbar-nav mr-auto">
+
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select Form...</a>
+                        <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" id="showCharge">Charge Profile</a>
+                            <a class="dropdown-item" id="showProfile">Create New Profile</a>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+        <div class="edge-header primary-color"></div>
+
+        <div class="collapse in" id="chargeCard">
+        <div class="container free-bird">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mx-auto" align="center">
+                    <div class="card">
+                        <div class="card-body">
+                            <form id="paymentForm"
+                                  method="POST"
+                                  action="javascript:chargeCard()">
+                                <p class="h4 text-center py-4">Charge Existing Profile</p>
+                                <div class="form-row">
+                                    <div class="col-md-12">
+                                        <div class="md-form">
+                                            <input type="text" class="form-control" name="amount" id="amount" required />
+                                            <label for="amount" class="font-weight-light">Amount</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--
+                                <select id="items">
+                                    <option selected="selected">Select an option</option>
+                                    <option value="1">Item 1 A</option>
+                                    <option value="2">Item 2 B</option>
+                                </select><br>
+                                -->
+                                <div class="form-row">
+                                    <div class="col-md-6">
+                                        <div class="md-form">
+                                            <input type="text" class="form-control" name="profile" id="profile" required />
+                                            <label for="profile" class="font-weight-light">Profile ID</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="md-form">
+                                            <input type="text" class="form-control" name="payment" id="payment" required />
+                                            <label for="payment" class="font-weight-light">Payment ID</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="hidden" name="dataValue" id="dataValue" />
+                                <input type="hidden" name="dataDescriptor" id="dataDescriptor" />
+                                <div class="text-center mt-4 mb-2">
+                                    <button type="submit" class="btn btn-primary" value="Submit">Submit<i class="fa fa-send ml-2"></i></button>
+                                </div>
+                            </form>
+                            <p id="demo3"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="right">
-            Charge Profile Payment Method
-            <form id="paymentForm"
-                  method="POST"
-                  action="javascript:chargeCard()">
-                <input type="text" name="amount" id="amount" placeholder="Amount" required />* <br>
-                <select id="items">
-                    <option selected="selected">Select an option</option>
-                    <option value="1">Item 1 A</option>
-                    <option value="2">Item 2 B</option>
-                </select><br>
-                <input type="text" name="profile" id="profile" placeholder="Profile ID" required />* <br>
-                <input type="text" name="payment" id="payment" placeholder="Payment ID" required />* <br>
-                <input type="hidden" name="dataValue" id="dataValue" />
-                <input type="hidden" name="dataDescriptor" id="dataDescriptor" />
-                <button type="submit" value="Submit">Submit</button>
-            </form>
-            * Required field
-            <p id="demo3"></p>
-
         </div>
+        <h2 class="mb-3"></h2>
+        <div class="collapse" id="createProfile" >
+        <div class="container free-bird">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mx-auto" align="center">
+                    <div class="card">
+                        <div class="card-body">
+                            <form id="paymentForm"
+                                  method="POST"
+                                  action="javascript:newProfile()">
+                                <p class="h4 text-center py-4">Create New Profile</p>
+                                <div class="form-row">
+                                    <div class="col-md-6">
+                                        <div class="md-form form-group">
+                                            <input type="text" class="form-control" id="firstName" />
+                                            <label for="firstName" class="font-weight-light">First Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="md-form form-group">
+                                            <input type="text" class="form-control" name="lastName" id="lastName" />
+                                            <label for="lastName" class="font-weight-light">Last Name</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-12">
+                                        <div class="md-form form-group">
+                                            <input type="text" class="form-control" name="company" id="company" />
+                                            <label for="company" class="font-weight-light">Company</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-12">
+                                        <div class="md-form form-group">
+                                            <input type="text" class="form-control" name="address" id="address" />
+                                            <label for="address" class="font-weight-light">Address</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-6">
+                                        <div class="md-form form-group">
+                                            <input type="text" class="form-control" name="city" id="city" />
+                                            <label for="city" class="font-weight-light">City</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="md-form form-group">
+                                            <input type="text" class="form-control" name="state" id="state" />
+                                            <label for="state" class="font-weight-light">State</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-6">
+                                        <div class="md-form form-group">
+                                            <input type="text" class="form-control" name="country" id="country" />
+                                            <label for="country" class="font-weight-light">Country</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="md-form form-group">
+                                            <input type="text" class="form-control" name="zip" id="zip" />
+                                            <label for="zip" class="font-weight-light">Zip</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-12">
+                                        <div class="md-form form-group">
+                                            <input type="text" class="form-control" name="phone" id="phone" />
+                                            <label for="phone" class="font-weight-light">Phone Number</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-12">
+                                        <div class="md-form form-group">
+                                            <input type="text" class="form-control" name="email" id="email" />
+                                            <label for="email" class="font-weight-light">Email*</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="hidden" name="dataValue" id="dataValue" />
+                                <input type="hidden" name="dataDescriptor" id="dataDescriptor" />
+                                <div class="text-center mt-4 mb-2">
+                                    <button type="button"
+                                            class="AcceptUI btn btn-primary"
+                                            data-billingAddressOptions='{"show":false, "required":false}' 
+                                            data-apiLoginID="9Wq3Hvxt252"
+                                            data-clientKey="9385VFB489azG4MSseS8GrFPu6728d9x2pg52Gbh597AL6Ups52QuhkpWg5LdC42"
+                                            data-acceptU:w
+                                            data-acceptUIFormBtnTxt="Submit" 
+                                            data-acceptUIFormHeaderTxt="Card Information" 
+                                            data-responseHandler="responseHandler">Submit<i class="fa fa-send ml-2"></i>
+                                    </button>
+                                </div>
+                            </form>
+                            * Required field
 
+                            <p id="test"></p>
+                            <p id="demo"></p>
+                            <p id="demo2"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <h2 class="mb-5"></h2>
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
 
+    <script type="text/javascript">
+        $("#chargeCard").collapse('show');
+        $("#showProfile").click(function(){
+            $("#createProfile").collapse('show');
+            $("#chargeCard").collapse('hide');
+        });
+        $("#showCharge").click(function(){
+            $("#chargeCard").collapse('show');
+            $("#createProfile").collapse('hide');
+        });
+    </script>
     </body>
 </html>

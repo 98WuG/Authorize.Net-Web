@@ -43,18 +43,21 @@ function chargeCard() {
 	var profileId = document.getElementById("profile").value;
 	var paymentId = document.getElementById("payment").value;
 	var amount = document.getElementById("amount").value;
+	/*
 	var temp = document.getElementById("items");
 	var item = temp.options[temp.selectedIndex].text;
 	var itemId = temp.options[temp.selectedIndex].value;
+	*/
+	document.getElementById("demo3").innerHTML = "Processing...";
 	$.ajax({
 		url: "php/chargeCard.php",
 		type: 'post',
 		data: {
 			"profileId": profileId,
 			"paymentId": paymentId,
-			"amount": amount,
-			"item": item,
-			"itemId": itemId
+			"amount": amount//,
+			//"item": item,
+			//"itemId": itemId
 		},
 		success: function(response) {
 			document.getElementById("demo3").innerHTML =

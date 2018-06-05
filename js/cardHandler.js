@@ -12,9 +12,6 @@ window.addEventListener('keydown',function(e){if(e.keyIdentifier=='U+000A'||e.ke
  */
 function responseHandler(response) {
 	// Reset demo outputs to blank
-	document.getElementById("demo").innerHTML = "";
-	document.getElementById("demo2").innerHTML = "";
-
 	document.getElementById("demo").innerHTML= "Processing...";
 
 	// If no email is filled in, stop immediately

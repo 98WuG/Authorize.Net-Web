@@ -69,7 +69,7 @@
         <!--<div class="container free-bird">-->
         <div class="container mt-4 mb-2">
             <div class="row align-items-center">
-                <div class="col-lg-6 mx-auto" align="center">
+                <div class="col-lg-6 mx-auto">
                     <div class="card">
                         <div class="card-body">
                             <form id="chargeForm"
@@ -123,7 +123,7 @@
         <!--<div class="container free-bird">-->
         <div class="container mt-4 mb-2">
             <div class="row align-items-center">
-                <div class="col-lg-6 mx-auto" align="center">
+                <div class="col-lg-6 mx-auto">
                     <div class="card">
                         <div class="card-body">
                             <form id="profileForm"
@@ -222,11 +222,8 @@
                                     </button>
                                 </div>
                             </form>
-                            * Required field
 
-                            <p id="test"></p>
                             <p id="demo"></p>
-                            <p id="demo2"></p>
                         </div>
                     </div>
                 </div>
@@ -256,9 +253,11 @@
         
         $("#resetCharge").click(function(){
             $("#chargeForm label").removeClass("active");
+            $("#demo3").html("");
         });
         $("#resetProfile").click(function(){
             $("#profileForm label").removeClass("active");
+            $("#demo").html("");
         });
     </script>
     </body>

@@ -67,7 +67,7 @@
                 <div class="col-lg-6 mx-auto" align="center">
                     <div class="card">
                         <div class="card-body">
-                            <form id="paymentForm"
+                            <form id="chargeForm"
                                   method="POST"
                                   action="javascript:chargeCard()">
                                 <p class="h4 text-center py-4">Charge Existing Profile</p>
@@ -103,6 +103,7 @@
                                 <input type="hidden" name="dataValue" id="dataValue" />
                                 <input type="hidden" name="dataDescriptor" id="dataDescriptor" />
                                 <div class="text-center mt-4 mb-2">
+                                    <button type="reset" id="resetCharge" class="btn btn-default">Reset<i class="fa fa-undo ml-2"></i></button>
                                     <button type="submit" class="btn btn-primary" value="Submit">Submit<i class="fa fa-send ml-2"></i></button>
                                 </div>
                             </form>
@@ -120,7 +121,7 @@
                 <div class="col-lg-6 mx-auto" align="center">
                     <div class="card">
                         <div class="card-body">
-                            <form id="paymentForm"
+                            <form id="profileForm"
                                   method="POST"
                                   action="javascript:newProfile()">
                                 <p class="h4 text-center py-4">Create New Profile</p>
@@ -201,6 +202,9 @@
                                 <input type="hidden" name="dataValue" id="dataValue" />
                                 <input type="hidden" name="dataDescriptor" id="dataDescriptor" />
                                 <div class="text-center mt-4 mb-2">
+                                </div>
+                                <div class="text-center mt-4 mb-2">
+                                    <button type="reset" id="resetProfile" class="btn btn-default">Reset<i class="fa fa-undo ml-2"></i></button>
                                     <button type="button"
                                             class="AcceptUI btn btn-primary"
                                             data-billingAddressOptions='{"show":false, "required":false}' 
@@ -244,6 +248,13 @@
         $("#showCharge").click(function(){
             $("#chargeCard").collapse('show');
             $("#createProfile").collapse('hide');
+        });
+        
+        $("#resetCharge").click(function(){
+            $("#chargeForm label").removeClass("active");
+        });
+        $("#resetProfile").click(function(){
+            $("#profileForm label").removeClass("active");
         });
     </script>
     </body>

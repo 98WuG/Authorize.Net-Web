@@ -43,6 +43,7 @@ function chargeCard() {
 	var profileId = document.getElementById("profile").value;
 	var paymentId = document.getElementById("payment").value;
 	var amount = document.getElementById("amount").value;
+	var invoice = document.getElementById("invoice").value;
 	/*
 	var temp = document.getElementById("items");
 	var item = temp.options[temp.selectedIndex].text;
@@ -55,7 +56,8 @@ function chargeCard() {
 		data: {
 			"profileId": profileId,
 			"paymentId": paymentId,
-			"amount": amount//,
+			"amount": amount,
+			"invoice": invoice//,
 			//"item": item,
 			//"itemId": itemId
 		},
